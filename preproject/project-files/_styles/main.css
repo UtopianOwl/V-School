@@ -1,0 +1,67 @@
+/* Calling custom fonts */
+@font-face {
+	font-family: 'digital';
+	src: url('digital.eot'); /* IE9 Compat Modes */
+	src: url('digital.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('digital.woff') format('woff'), /* Modern Browsers */
+	     url('digital.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('digital.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+@font-face {
+	font-family: 'expy';
+	src: url('expy.eot'); /* IE9 Compat Modes */
+	src: url('expy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('expy.woff') format('woff'), /* Modern Browsers */
+	     url('expy.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('expy.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+/* Formatting the color scheme for the webpage using the body selector */
+body {
+    color: red;
+    background-color: black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* Formatting the text and placement of the display timer */
+div.timer {
+    font-family: 'digital';
+    font-size: 3em;
+    width: 90%;
+    margin: auto;
+}
+/* Formattting the look and placement of the buttons */
+div.buttons {
+    width: 90%;
+    min-width: 256px;
+    margin: auto;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    
+}
+input {
+    font-family: 'expy';
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid red;
+    background-color: black;
+    color: red;
+    width: 4em;
+    margin-right: auto;
+    margin-left: auto;
+}
+/* Formatting the placement and look of the listed array */
+div.newlog {
+    clear: both;
+    font-family: 'digital';
+    font-size: 2em;
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    text-align: center;
+}
+ul#log {
+    list-style-type: none
+}

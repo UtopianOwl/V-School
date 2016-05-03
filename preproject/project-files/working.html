@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Stopwatch</title>
+    <!--    V-School Pre-Course Project
+        Drew  Nauman    
+        5th/Final Concept: Stopwatch    -->
+
+    <!-- Link to style sheet for the page -->
+    <link rel="stylesheet" href="_styles/main.css" type="text/css" charset="utf-8" />
+</head>
+
+<body>
+
+    <!-- Header displaying the time -->
+    <div class="timer">
+        <h1 id="display">
+            00:00:00
+        </h1>
+    </div>
+
+    <!-- Three buttons for stopping/starting the timer, resetting the timer, and logging times respectively -->
+    <div class="buttons">
+        <input id="start" type="button" value="start" />
+        <input id="reset" type="button" value="reset" />
+        <input id="lap" type="button" value="lap" />
+
+    </div>
+
+    <!--- Unordered list to display the array containing lap times -->
+    <div class="newlog">
+        <ul id="log"></ul>
+    </div>
+
+    <!-- Link to the document containing the JavaScript for the page -->
+    <script src="_scripts/stopwatch.js"></script>
+</body>
+
+</html>
