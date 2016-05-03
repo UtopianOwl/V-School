@@ -1,0 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+html {
+    background-color: darkslategray;
+}
+h1 {
+    font-family: 'Bangers', cursive;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 3em;
+    font-size: 3em;
+}

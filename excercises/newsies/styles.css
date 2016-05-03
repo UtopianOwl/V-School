@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+html {
+    background-color: dimgray;
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+}
+h1 {
+    text-align: center;
+    margin: 2em;
+
+}
+section {
+    display: inline-block;
+    width: 30%;
+    margin: 1em;
+    float: left;
+    
+}
+
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
