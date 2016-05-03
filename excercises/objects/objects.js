@@ -26,6 +26,7 @@ var caveMan = {
                     },
                 ],
                 showMe: function () {
+                    console.log(this.name)
                     for (var i = 0; i < this.skills.length; i++) {
                         console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
                     }
