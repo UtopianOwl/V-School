@@ -26,10 +26,11 @@ console.log(howAttractedIsLoisLaneToMe())
 
 var clarkKent = true;
 var superman = false;
-
-while (clarkKent = true) {
+svar i = 0;
+while (clarkKent == true) {
     console.log("I'm just a nerdy columnist");
     var phoneBoothQuickChange = Math.random();
+    console.log(i++)
     if (phoneBoothQuickChange >= 0.5) {
         clarkKent = false;
         superman = true;

@@ -1,3 +1,10 @@
+// This function will be used as my method 
+var levelFunction = function () {
+    console.log(this.name)
+    for (var i = 0; i < this.skills.length; i++) {
+        console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
+    }
+}
 var caveMan = {
         name: "Gurk",
         age: 26,
@@ -25,12 +32,8 @@ var caveMan = {
                         proficiency: 5
                     },
                 ],
-                showMe: function () {
-                    console.log(this.name)
-                    for (var i = 0; i < this.skills.length; i++) {
-                        console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
-                    }
-                }
+//      Here is that method
+                showMe: levelFunction
             },
             {
                 name: "Arr",
@@ -52,12 +55,7 @@ var caveMan = {
                         proficiency: 5
                     },
                 ],
-                showMe: function () {
-                    console.log(this.name)
-                    for (var i = 0; i < this.skills.length; i++) {
-                        console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
-                    }
-                }
+                showMe: levelFunction
             },
             {
                 name: "Ish",
@@ -79,12 +77,7 @@ var caveMan = {
                         proficiency: 5
                     },
                 ],
-                showMe: function () {
-                    console.log(this.name)
-                    for (var i = 0; i < this.skills.length; i++) {
-                        console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
-                    }
-                }
+                showMe: levelFunction
         },
             {
                 name: "Gog",
@@ -106,12 +99,7 @@ var caveMan = {
                         proficiency: 5
                     },
                 ],
-                showMe: function () {
-                    console.log(this.name)
-                    for (var i = 0; i < this.skills.length; i++) {
-                        console.log(this.skills[i].name + " level " + this.skills[i].proficiency);
-                    }
-                }
+                showMe: levelFunction
             },
         ],
         skills: [
