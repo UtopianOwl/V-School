@@ -1,0 +1,39 @@
+body {
+    font-size: 16px;
+}
+main {
+    background-color: white;
+    height: 13.125em;
+    width: 18.75em;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+}
+div {
+    display: inline-block;
+    height: 24.3%;
+    margin: 0;
+    padding: 0;
+/*    border: .25em solid white;*/
+    box-sizing: border-box;
+}
+.pink {
+    width: 100%;
+    background-color: #F5C6D6;
+}
+.magenta {
+    width: 24%;
+    background-color: #EE2E84;
+    }
+.blue {
+    width: 49.3%;
+    background-color: #85CFD8;
+}
+.green {
+    width: 74.6%;
+    background-color: #8DC63F;
+}
+.orange {
+    width: 24%;
+    background-color: #E76E34;
+}

@@ -1,0 +1,25 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    padding: 16px;
+}
+.totals td {
+    text-align: right;
+}
+.totals {
+    font-weight: bolder;
+    background-color: #bbb
+}
+.heading {
+    background-color: cornflowerblue;
+    
+}
+th:nth-child(1) {
+    background-color: #CC5654;
+}
+.blank {
+    background-color: whitesmoke;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mario Pest Control</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Mario Pest Control</h1>
+    </header>
+    <main>
+        <article>
+            <ul class="baddiesList">
+                <li id="goomba">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Goombas:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="sublist">
+                                <li id="gcaught">Caught: 12</li>
+                                <li id="gprice">Price: 5 Coins</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="bobomb">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Bob-ombs:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="sublist">
+                                <li id="bcaught">Caught: 8</li>
+                                <li id="bprice">Price: 7 Coins</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li id="cheepCheep">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Cheep-cheeps:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="sublist">
+                                <li id="ccaught">Caught: 5</li>
+                                <li id="cprice">Price: 11 Coins</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <aside>
+            <h3 id="total" class="well">Total Price</h3>
+        </aside>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 text-center">
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </button>
+                    <span class="dropdown-menu" aria-labelledby="dropdownMenu2" id="email">mario@peah4lyfe.com</span>
+                </div>
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    </button>
+                    <span class="dropdown-menu" aria-labelledby="dropdownMenu2" id="website">www.itsameamario.com</span>
+                </div>
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </button>
+                    <span class="dropdown-menu" aria-labelledby="dropdownMenu2" id="address">Ca' Loredan - Sestier de San Marco, 4137 Venezia</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="main.js"></script>
+
+</html>
