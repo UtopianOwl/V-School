@@ -1,7 +1,86 @@
-h3.well {
-    text-align: right;
+@font-face {
+    font-family: "Mario";
+    src: url('mario.ttf');
 }
-
+@font-face {
+    font-family: "Castle Builder";
+    src: url('castlebuilder.ttf');
+}
+body {
+    font-size: 16px;
+    font-family: "Mario";
+    background-image: url(congruent_pentagon.png);
+}
+/* give header and h3.well a white shadow and black text color.*/
+header {
+    text-align: center;
+    background-color: forestgreen;
+    color: whitesmoke;
+    text-shadow: 2px 2px #000000;
+}
+h1 {
+    font-size: 3em;
+}
+article.baddiecontainer {
+    background-color: white;
+    max-width: 70em;
+    margin: 0 auto;
+    border: 3px solid forestgreen;
+    padding: 10px;
+}
+h3.well {
+    font-size: 2em;
+    text-align: right;
+    background-color: forestgreen;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000000;
+    width: 30em;
+    margin: .5em auto;
+}
 .dropup {
     display: inline-block;
+}
+.baddiesList {
+/*    margin-left: 4.5em;*/
+    list-style: none;
+    padding-left: 0;
+}
+.image {
+    display: inline-block;
+    width: 7.5em;
+}
+img {
+    display: inline-block;
+    /* might have to change this to pixels to work with responsive design*/
+    position: relative;
+    top: -2em;
+    width: 100%;
+    height: auto;
+}
+#goomba {
+/*    list-style-image: url(goomba.jpeg)*/
+    display: inline-block;
+}
+#bobomb {
+/*    list-style-image: url(bobomb.jpeg);*/
+    display: inline-block;
+}
+#cheepCheep {
+/*    list-style-image: url(cheepcheep1.jpeg);*/
+    display: inline-block;
+}
+.sublist {
+    list-style: disc;
+}
+.castle {
+    font-family: "Castle Builder";
+}
+p.castle {
+    text-align: center;
+    color: forestgreen;
+    font-size: 2em;
+}
+div.panel {
+    width: 20em;
+    margin: auto;
 }

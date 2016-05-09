@@ -1,0 +1,28 @@
+.symbol {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+.answer {
+    margin-left: 8px;
+}
+.well {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 450px;
+    
+}
+#add {
+    margin-top: 20px;
+    background-color: #0867B2;
+}
+#subtract {
+    background-color: #FF6964;
+}
+#multiply {
+    background-color: #FBFF95;
+}
+#divide {
+    background-color: #98FFAD;
+}

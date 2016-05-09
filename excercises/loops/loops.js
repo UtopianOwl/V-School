@@ -43,3 +43,14 @@ console.log(numbers.shift());
         
 }
 findSmall();
+
+
+//BONUS: check if input is a number!
+var input = readline.question("Type things: ");
+var number = parseInt(input);
+
+if (isNaN(number)) {
+    console.log("You're dumb.");
+} else {
+    console.log ("This is a number. Good Job!")
+}

@@ -1,0 +1,54 @@
+
+
+@media screen and (min-width: 375px) {
+    body {font-size: 0.5em;}
+}
+@media screen and (min-width: 425px) {
+    body {font-size: 0.5625em;}
+}
+@media screen and (min-width: 475px) {
+    body {font-size: 0.625em;}
+}
+@media screen and (min-width: 525px) {
+    body {font-size: 0.6875em;}
+}
+@media screen and (min-width: 575px) {
+    body {font-size: 0.75em;}
+}
+@media screen and (min-width: 625px) {
+    body {font-size: 0.8125em;}
+}
+@media screen and (min-width: 675px) {
+    body {font-size: 0.875em;}
+}
+@media screen and (min-width: 725px) {
+    body {font-size: 0.9375em;}
+}
+@media screen and (min-width: 775px) {
+    body {font-size: 1em;}
+}
+@media screen and (min-width: 875px) {
+    body {font-size: 1.0625em;}
+}
+@media screen and (min-width: 925px) {
+    body {font-size: 1.125em;}
+}
+@media screen and (min-width: 975px) {
+    body {font-size: 1.1875em;}
+}
+@media screen and (min-width: 1025px) {
+    body {font-size: 1.25em;}
+}
+@media screen and (min-width: 1075px) {
+    body {font-size: 1.3125em;}
+}
+@media screen and (min-width: 1125px) {
+    body {font-size: 1.375em;}
+}
+@media screen and (min-width: 1175px) {
+    body {font-size: 1.4375em;}
+}
+@media screen and (min-width: 1225px) {
+    body {font-size: 1.5em;}
+}
+

@@ -5,60 +5,78 @@
     <meta charset="utf-8">
     <title>Mario Pest Control</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
     <header class="page-header">
-        <h1>Mario Pest Control</h1>
+        <h1>
+            <span class="castle">DMLON</span>
+            Mario Pest Control
+            <span class="castle">NOLMD</span>
+        </h1>
     </header>
     <main>
-        <article>
-            <ul class="baddiesList">
-                <li id="goomba">
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Goombas:</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="sublist">
-                                <li id="gcaught">Caught: 12</li>
-                                <li id="gprice">Price: 5 Coins</li>
-                            </ul>
-                        </div>
+        <article class="baddiecontainer">
+            <ul class="baddiesList text-center">
+                <div class="row">
+                    <div class="image">
+                        <img src="goomba.jpeg">
                     </div>
-                </li>
-
-                <li id="bobomb">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Bob-ombs:</h3>
+                    <li id="goomba">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Goombas:</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="sublist">
+                                    <li id="gcaught">Caught: 12</li>
+                                    <li id="gprice">Price: 5 Coins</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <ul class="sublist">
-                                <li id="bcaught">Caught: 8</li>
-                                <li id="bprice">Price: 7 Coins</li>
-                            </ul>
-                        </div>
+                    </li>
+                </div>
+                <div class="row">
+                    <div class="image">
+                        <img src="bobomb.jpeg">
                     </div>
-                </li>
-
-                <li id="cheepCheep">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Cheep-cheeps:</h3>
+                    <li id="bobomb">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Bob-ombs:</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="sublist">
+                                    <li id="bcaught">Caught: 8</li>
+                                    <li id="bprice">Price: 7 Coins</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <ul class="sublist">
-                                <li id="ccaught">Caught: 5</li>
-                                <li id="cprice">Price: 11 Coins</li>
-                            </ul>
-                        </div>
+                    </li>
+                </div>
+                <div class="row">
+                    <div class="image">
+                        <img src="cheepcheep1.jpeg">
                     </div>
-                </li>
+                    <li id="cheepCheep">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Cheep-cheeps:</h3>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="sublist">
+                                    <li id="ccaught">Caught: 5</li>
+                                    <li id="cprice">Price: 11 Coins</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </div>
             </ul>
         </article>
         <aside>
@@ -87,6 +105,9 @@
                     <span class="dropdown-menu" aria-labelledby="dropdownMenu2" id="address">Ca' Loredan - Sestier de San Marco, 4137 Venezia</span>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <p class="castle">KAPAAHAGAFAEADAAIJIJIABACCCCCABAIJIJIAADAEAFAFAGAHAAPAK</p>
         </div>
     </footer>
 </body>
