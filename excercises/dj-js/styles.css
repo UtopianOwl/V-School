@@ -1,6 +1,7 @@
-#square {
+div#square {
     width: 400px;
     height: 400px;
     background-color: mediumpurple;
     margin-top: 50px;
+    overflow: auto;
 }

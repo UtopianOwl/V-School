@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Forms</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="main.js"></script>
+</head>
+
+<body class="container">
+    <form name="myTravelForm">
+        <div class="form-group">
+            <label for="firstName" id="firstName">First Name:</label>
+            <input type="text" name="firstName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lastName" id="lastName">Last Name:</label>
+            <input type="text" name="lastName" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="age" id="age">Age:</label>
+            <input type="number" name="age" class="form-control">
+        </div>
+        <div class="form-group">
+           <label for="gender" id="gender">Gender:</label>
+           <br>
+            <input type="radio" name="gender" value="Male"> Male<br>
+        
+            <input type="radio" name="gender" value="Female"> Female<br>
+
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+        <div class="form-group">
+           <label for="destination" id="destination">Destination:</label>
+            <select name="destination" id="destination" class="form-control">
+                <option value="BGM">BGM</option>
+                <option value="ELM">ELM</option>
+                <option value="ITH">ITH</option>
+                <option value="SYR">SYR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="diet" id="diet">Dietary Restrictions:</label>
+            <select name="diet" id="diet" class="form-control">
+                <option value="None">None</option>
+                <option value="Gluten-Free">Gluten Free</option>
+                <option value="Halal">Halal</option>
+                <option value="Kosher">Kosher</option>
+                <option value="Lactose-Free">Lactose Free</option>
+                <option value="vegan">Vegan</option>
+            </select>
+        </div>
+    </form>
+    <button class="btn btn-info" onclick="processForm()">SUBMIT</button>
+</body>
+</html>
