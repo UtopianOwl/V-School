@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
 html {
-    background: url(Blu-Home-Entrance.jpg) no-repeat center center fixed; 
+    background: url(../images/backgrounds/BluHome-index.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,7 +14,7 @@ body, .container, .row {
     display: block;
     width: 4em;
 }
-img {
+img#logo {
     width: 4em;
     height: auto;
     padding-top: .5em;
@@ -41,13 +41,15 @@ nav {
 h1, h2 {
     font-family: "Poiret One", "Helvetica", sans-serif;
 }
-#name{
+#name, article#contact h1{
     font-size: 2em;
     margin-bottom: -.5em;
+    text-align: center;
 }
-#tagline {
+#tagline, article#contact h2 {
     font-size: 1em;
     padding-bottom: .5em;
+    text-align: center;
 }
 article {
     background-color: white;
@@ -65,11 +67,21 @@ article#about {
     text-align: center;
 }
 p.article{
+    font-family: "Poiret One", "Helvetica", sans-serif;
     text-align: justify;
     font-size: 1.2em;
+    padding: 20px;
 }
-/*
-html, body, div.conainer, div.row, div#aboutColumn {
-    overflow-y: auto;
-    height: 100%;
-}*/
+#message {
+    height: 10em;
+}
+img.thumbnail {
+    width: 6em;
+    height: auto;
+}
+article#gallery {
+    padding-top: 10px;
+}
+span.bold {
+    font-style: italic;
+}

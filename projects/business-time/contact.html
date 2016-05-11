@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"  style="background: url(BluHome-contact.jpg) no-repeat center center fixed;">
+<html lang="en" style="background: url(images/backgrounds/BluHome-contact.jpg) no-repeat center center fixed;">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>ECO HOMES Homepage</title>
 </head>
 
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-xs-4" id="navColumn">
                 <header id="banner" role="banner">
-                    <img id="logo" src="Mannaz.jpg" alt="mannaz logo" class="center-block img-responsive" />
+                    <img id="logo" src="images/Mannaz.jpg" alt="mannaz logo" class="center-block img-responsive" />
                     <h1 id="name" class="text-center">HUMAN DWEL</h1>
                     <h2 id="tagline" class="text-center">ecologically susatainable modular design</h2>
                 </header>
@@ -27,16 +27,32 @@
                     </ul>
                 </nav>
             </div>
-<!--            <div class="col-xs-4 col-xs-offset-8">-->
-                <article id="contact">
-                    <header>
-                        <h1>Contact Us</h1>
-                    </header>
-                    <span>We're happy to answer any questions you may have. Simply submit the form below.<br>Thanks!</span>
-                </article>
-<!--            </div>-->
+            <article id="contact">
+                <header>
+                    <h1>Contact Us</h1>
+                    <h2>We're happy to answer any questions you may have. Simply submit the form below:<h2>
+                </header>
+                <main>
+                    <form name="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Name (e.g. John Smith)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="E-Mail Address (e.g. Johm.Smith@gmail.com)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+<!--                            <input id="message" type="text" name="message" class="form-control" placeholder="Your message here...">-->
+                            <textarea name="message" class="form-control" placeholder="Your message here..." rows="5"></textarea>
+                        </div>
+                        <button class="btn btn-default" onclick="thankYou()">Submit</button>
+                    </form>
+                </main>
+            </article>
         </div>
     </div>
+<script type="text/javascript" src="js/contact.js"></script>
 </body>
-
 </html>

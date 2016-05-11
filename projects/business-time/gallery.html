@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: url(images/backgrounds/BluHome-gallery.jpg) no-repeat center center fixed;">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/fresco/fresco.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/fresco/fresco.css" />
+    <link rel="stylesheet" href="css/style.css">
     <title>ECO HOMES Homepage</title>
 </head>
 
@@ -14,7 +17,7 @@
         <div class="row">
             <div class="col-xs-4" id="navColumn">
                 <header id="banner" role="banner">
-                   <img id="logo" src="Mannaz.jpg" alt="mannaz logo" class="center-block img-responsive" />
+                    <img id="logo" src="images/Mannaz.jpg" alt="mannaz logo" class="center-block img-responsive" />
                     <h1 id="name" class="text-center">HUMAN DWEL</h1>
                     <h2 id="tagline" class="text-center">ecologically susatainable modular design</h2>
                 </header>
@@ -27,13 +30,33 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-xs-4">
-                <article>
-                    <p>
-
-                    </p>
-                </article>
-            </div>
+            <article id="gallery">
+                <div class='demonstrations'>
+                    <a href='images/gallery/gallery1.jpg' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL X: Exterior">
+                        <img src='images/thumbnails/thumbnail1.jpg' alt='MODEL X: Exterior' class="thumbnail" />
+                    </a>
+                    <br>
+                    <a href='images/gallery/gallery2.jpg' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL X: Interior - Living Room">
+                        <img src='images/thumbnails/thumbnail2.jpg' alt='MODEL X: Interior - Living Room' class="thumbnail" />
+                    </a>
+                    <br>
+                    <a href='images/gallery/gallery3.jpg' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL C: Exterior">
+                        <img src='images/thumbnails/thumbnail3.jpg' alt='MODEL C: Exterior' class="thumbnail" />
+                    </a>
+                    <br>
+                    <a href='images/gallery/gallery4.png' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL C: Interior">
+                        <img src='images/thumbnails/thumbnail4.png' alt='MODEL C: Interior' class="thumbnail" />
+                    </a>
+                    <br>
+                    <a href='images/gallery/gallery5.jpg' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL Y: Exterior">
+                        <img src='images/thumbnails/thumbnail5.jpg' alt='MODEL Y: Exterior' class="thumbnail" />
+                    </a>
+                    <br>
+                    <a href='images/gallery/gallery6.jpg' class='fresco' data-fresco-group='example' data-fresco-caption="MODEL Y: Interior - Living Room">
+                        <img src='images/thumbnails/thumbnail6.jpg' alt='MODEL Y: Interior - Living Room' class="thumbnail" />
+                    </a>
+                </div>
+            </article>
         </div>
     </div>
 </body>
