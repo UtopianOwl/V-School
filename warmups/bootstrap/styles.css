@@ -43,3 +43,10 @@ footer {
 .star {
     font-family: "Font Awesome"
 }
+
+@media screen and (min-width: 430px) {
+    #about {min-width: 430px}
+}
+img {
+    margin-top: 32px;
+}

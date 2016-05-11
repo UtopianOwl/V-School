@@ -106,13 +106,13 @@ function Enemy(name, description, attack, defense, accuracy) {
     }
 }
 
-var gromflomites = new Enemy("gromflomites", "As you are walking you hear a noise in the distance...\n A buzzz...\n Buzzz...\n  Buzzzz...   BUZZZZ...\n     BUZZZZZZZZZ...", 5, 2, .4);
+var gromflomites = new Enemy("gromflomites", "As you are walking you hear a noise in the distance...\n A buzzz...\n Buzzz...\n  Buzzzz...   BUZZZZ...\n     BUZZZZZZZZZ...", 2, 2, .4);
 
-var gazorpazorp = new Enemy("gazorpazorp", "You are walking when you stumble across a recently-disposed-of sex robot carelessly discarded to the roadside. The mephitic odor and asmatic, wheezy rumble that could only have its origin in some unearthly large creature looming behind you, indicate it was far too recently. Here we go again...", 7, 7, .6);
+var gazorpazorp = new Enemy("gazorpazorp", "You are walking when you stumble across a recently-disposed-of sex robot carelessly discarded to the roadside. The mephitic odor and asmatic, wheezy rumble that could only have its origin in some unearthly large creature looming behind you, indicate it was far too recently. Here we go again...", 7, 6, .6);
 
-var betaSeven = new Enemy("beta7", "Beta 7 is here!\nOh, Brother!", 2, 8, .7);
+var betaSeven = new Enemy("beta7", "Beta 7 is here!\nOh, Brother!", 1, 8, .7);
 
-var korblock = new Enemy("korblock", "It's a Korblock, LOOK OUT!", 6, 5, .65);
+var korblock = new Enemy("korblock", "It's a Korblock, LOOK OUT!", 5, 5, .65);
 
 var krombopulosMichael = new Enemy("krombopulosMichael", "Now you're fucked!", 10, 10, .9);
 
@@ -120,20 +120,27 @@ var krombopulosMichael = new Enemy("krombopulosMichael", "Now you're fucked!", 1
 var isContinue = "";
 
 function combatChoice() {
-    var fightFlight = readline.question("\n [attack || defend]:");
+    var fightFlight = readline.question("\n [attack || flee]:");
     var isFight = false;
     while (!isFight) {
         if (fightFlight === "attack") {
             if (playerDefend <= enemyAttack) {
-                var willContinue = readline.question("You have died like a little bitch.\nDo you wish to continue? [y || n]");
                 var isDead = true;
-                while (isDead)
-                if (willContinue === "y") {
-                    walk();
-                    isDead = false;
-                } else if (willContinue === "n") {
-                    exit();
-                } else
+                while (isDead) {
+                    var willContinue = readline.question("You have died like a little bitch.\nDo you wish to continue? [y || n]");
+                    if (willContinue === "y") {
+                        playerStats[2] += .25;
+                        walk();
+                        isDead = false;
+                    } else if (willContinue === "n") {
+                        exit();
+                        isDead = false
+                    } else {
+                        console.log("ERROR: INVALID COMMAND")
+                    }
+                }
+            } else if (playerAttack >= enemyDefend) {
+                
             }
         }
     }
@@ -141,17 +148,17 @@ function combatChoice() {
 
 //roll to see which enemy appears
 function whichEnemy() {
-    var enemyType = randomNum()
-    if (enemyType < .4) {
-        //Generate enemy 1
-    } else if (enemyType < .70) {
-        //generate enemy 2
-    } else if (enemyType < .90) {
-        //generate enemy 3
-    } else if (enemyType <= .99) {
-        //generate enemy 4
+    if (randomNum() < .4) {
+        
+        return gromflomites;
+    } else if (randomNum() < .70) {
+        return betaSeven;
+    } else if (randomNum() < .90) {
+        return korblock;
+    } else if (randomNum() <= .99) {
+        return gazorpazorp;
     } else {
-        //generate Krombopulous Michael
+        return krombopulosMichael;
     }
 }
 
