@@ -51,7 +51,6 @@ h3.well {
 }
 img {
     display: inline-block;
-    /* might have to change this to pixels to work with responsive design*/
     position: relative;
     top: -2em;
     width: 100%;
