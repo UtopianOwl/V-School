@@ -30,12 +30,14 @@ img#logo {
     top: 8em;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    min-width: 320px;
 }
 nav {
     position: relative;
     top: 7em;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    min-width: 320px;
 }
 
 h1, h2 {
@@ -84,4 +86,17 @@ article#gallery {
 }
 span.bold {
     font-style: italic;
+}
+div.demonstrations * {
+    display: block;
+}
+img#navImage {
+    width: 1em;
+    height: auto;
+}
+.poiret {
+    font-family: "Poiret One", "Helvetica", sans-serif;
+}
+nav#navBar {
+    display: none;
 }

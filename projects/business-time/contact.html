@@ -5,11 +5,42 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/sandstone/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>ECO HOMES Homepage</title>
 </head>
 
 <body>
+    <nav id="navBar" role="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img id="navImage" alt="Mannaz logo" src="images/Mannaz.jpg" class="center-block img-responsive">
+                </a>
+                <a class="navbar-brand poiret" href="index.html">HUMAN DWEL</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="about.html" class="poiret">About</a></li>
+                    <li class="active"><a href="#" class="poiret">Contact <span class="sr-only">(current)</span></a></li>
+                    <li><a href="gallery.html" class="poiret">Gallery</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-xs-4" id="navColumn">
@@ -18,7 +49,7 @@
                     <h1 id="name" class="text-center">HUMAN DWEL</h1>
                     <h2 id="tagline" class="text-center">ecologically susatainable modular design</h2>
                 </header>
-                <nav role="navigation">
+                <nav id="navBox" role="navigation">
                     <ul class="nav nav-pills nav-stacked center-block">
                         <li role="presentation"><a href="index.html">Home</a></li>
                         <li role="presentation"><a href="about.html">About Us</a></li>
