@@ -120,9 +120,8 @@ var caveMan = {
     // Add two properties to an object
 caveMan.tribe[3].drunk = true;
 caveMan.tribe[3].lazy = true;
-console.log("Gog is drunk and lazy: " + caveMan.tribe[3].drunk + ", " + caveMan.tribe[3].lazy);
 
-// Add two items to and array
+// Add two items to an array
 caveMan.tribe[1].skills[3] = {
     name: "prophecy",
     proficiency: 2
@@ -131,7 +130,6 @@ caveMan.tribe[1].skills[4] = {
     name: "mysticism",
     proficiency: 2
 }
-console.log("Arr is learning " + caveMan.tribe[1].skills[4].name + " and " + caveMan.tribe[1].skills[3].name)
 
 for (var j = 0; j < caveMan.tribe.length; j++) {
     caveMan.tribe[j].showMe()

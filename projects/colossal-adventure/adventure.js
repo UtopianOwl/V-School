@@ -309,7 +309,7 @@ function combat() {
     console.log(enemy.description);
     while (!valid) {
         var combatResponse = readline.question("How do you respond? [attack | run] ")
-        if (combatResponse.toLowerCase() === "attack" || combatResponse.toLowerCase("a")) {
+        if (combatResponse.toLowerCase() === "attack" || combatResponse.toLowerCase = "a") {
             // attack stuff
             //compare player and enemy accuracy, greater attacks first
             if (player.accuracy >= enemy.accuracy) {

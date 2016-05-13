@@ -1,15 +1,23 @@
+
+/////////////////////////////////////////////////////////////////////////////////
+//                                                                             //
+//                            MANDATORY CHALLENGES                             //
+//                                                                             //
+/////////////////////////////////////////////////////////////////////////////////
+
+//1.
 function sum(x,y) {
     return x + y;
 }
-
+//2.
 var largest = function(x,y,z) {
     return Math.max(x,y,z);
 }
-
+//3.
 function evenOrOdd(x) {
    return x % 2 === 0 ? "Even" : "Odd";
 }
-
+//4.
 var stringaling = ""
 var charCount = function (stringaling) {
     return stringaling.length <= 20 ? stringaling + stringaling : stringaling.slice(0,(stringaling.length / 2));
@@ -24,9 +32,13 @@ console.info("character count")
 console.log(charCount("Ben"));
 console.log(charCount("Pseudohermaphroditism"));
 
-//OPTIONAL CHALLENGES
+/////////////////////////////////////////////////////////////////////////////////
+//                                                                             //
+//                           OPTIONAL CHALLENGES                               //
+//                                                                             //
+/////////////////////////////////////////////////////////////////////////////////
 
-//Fibonacci Sequence
+//1. Fibonacci Sequence
 console.info("fibonacci function")
 var sequence = [0,1];
 function fib(n) {
@@ -48,7 +60,7 @@ function fib(n) {
 }
 fib(9);
 
-// Quadratic Formula
+//2. Quadratic Formula
 console.info("quadratic formula function")
 
 var quadratic = function (a,b,c) {
@@ -63,7 +75,7 @@ var quadratic = function (a,b,c) {
 }
 console.log(quadratic(1,4,2))
 
- Frequent Letter
+//3. Frequent Letter
 console.info("Frequent Letter Function")
 var splitword = [];
 var letters = [];

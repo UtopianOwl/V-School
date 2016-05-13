@@ -1,4 +1,8 @@
 # CSS-WARS: THE SELECTOR AWAKENS
+Static webpage to practice css selectors
+It was designed by Drew Nauman as part of the curriculum for the V-School full-stack web development bootcamp.
+
+## Original instructions:
 A static repo to practice css selectors.
 
 You will be use three types of css selectors in this project:
