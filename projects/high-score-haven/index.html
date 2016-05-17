@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>High-Score Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body onunload="saveScores();">
+    <header>
+        <h1 class="old">hav3n</h1>
+    </header>
+    <aside>
+        <button id="new" class="old" onclick="newForm();">New</button>
+        <form name="newHighScore" class="new" onsubmit="event.preventDefault();">
+            <input type="text" id="name" name="name" placeholder="Name" class="newScore" required>
+            <br>
+            <input type="text" id="game" name="game" placeholder="Game" class="newScore" required>
+            <br>
+            <input type="date" id="date" name="date" class="newScore">
+            <br>
+            <!--
+           <fieldset name="score">
+              <label for="score">Choose Score Type:</label><br>
+               <input type="radio" name="score" value="Time Hi"> Time Hi<br>
+               <input type="radio" name="score" value="Time Lo">Time Lo
+-->
+            <input type="number" id="score" name="score" placeholder="Score" class="newScore" required>
+            <!--
+               <input type="time" id="score" name="score" placeholder="Score" class="new newScore" required>
+               <br>
+               <input type="radio" name="score" value="Points" checked> Points<br>
+           </fieldset>
+-->
+            <br>
+            <div class="newScore">
+                <input type="checkbox" id="trash" name="trash"><span>Talk Trash?</span>
+            </div>
+            <br>
+            <div class="newScore">
+                <button id="submit" onclick="processForm()">Submit</button>
+                <input type="reset" class="button standard" value="Clear">
+            </div>
+        </form>
+    </aside>
+    <main>
+        <article onload="loadScores();">
+            <table id="scoresTable" class="old">
+            </table>
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+{
+    
+    "appetizers" : [
+        {
+            "name" : "Mozzarella Sticks",
+            "ingredients": ["Eggs", "Flour", "Cornstarch", "Bread Crumbs", "Mozzarella", "Oil"],
+            "description": "Perfect with our housemade Marinara"
+        }, {
+            "name" : "Salad",
+            "ingredients": ["Lettuce", "Tomato", "Cucumber", "Carrot", "Dressing"],
+            "description": "A healthy option"
+        }, {
+            "name" : "Soup",
+            "ingredients": ["???", "???", "Meat"],
+            "description": "Yes, soup for you!"
+        }
+    ],
+    "coldSandwiches" : [
+        {
+            "name" : "Cheese",
+            "ingredients": ["Bread", "Cheese"],
+            "description": "Simple yet elegant"
+        }, {
+            "name" : "Cucumber",
+            "ingredients": ["Bread", "Cucumber"],
+            "description": "Keep it Classy!"
+        }, {
+            "name" : "Caprese",
+            "ingredients": ["Bread", "Basil", "Mozzarella", "Tomato", "Balsamic Glaze", "Olive Oil"],
+            "description": "Multo bene!"
+        }
+    ],
+    "hotSandwiches" : [
+        {
+            "name" : "BLT",
+            "ingredients": ["Bread", "Bacon", "Lettuce", "Tomato"],
+            "description": "Keep it Classic!"
+        }, {
+            "name" : "Meatball Sub",
+            "ingredients": ["Bread", "Meatballs", "Cheese", "Marinara"],
+            "description": "Hearty and satisying!"
+        }, {
+            "name" : "Grilled Cheese",
+            "ingredients": ["Bread, Cheese, Butter"],
+            "description": "Warm and comforting."
+        }
+    ],
+    "desserts" : [
+        {
+            "name" : "Ice Cream",
+            "ingredients": ["Egg", "Milk", "Cream", "Flavor"],
+            "description": "We all scream for Ice Cream!"
+        }, {
+            "name" : "Cake",
+            "ingredients": ["Flour", "Egg", "Milk", "Sugar", "Oil"],
+            "description": "It's no lie!"
+        }, {
+            "name" : "Pie",
+            "ingredients": ["Pie Crust", "Fruit", "Sugar", "Whipped Cream"],
+            "description": "Pie O My!"
+        }
+    ],
+    "drinks" : [
+        {
+            "name" : "Water",
+            "ingredients": ["Water"],
+            "description": "Rehydrate"
+        }, {
+            "name" : "Coffee",
+            "ingredients": ["Water", "Coffee"],
+            "description": "Re-energize"
+        }, {
+            "name" : "Tea",
+            "ingredients": ["water", "tea"],
+            "description": "rebalance"
+        }
+    ]
+    
+}

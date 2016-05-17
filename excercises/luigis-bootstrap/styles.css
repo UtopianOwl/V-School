@@ -2,33 +2,79 @@
     font-family: "Mario";
     src: url('SuperMario256.ttf');
 }
+
 body {
     font-size: 16px;
     font-family: "Mario", sans-serif;
-    color: red;
 }
-.aboutMe {
-    background-color: white;
+
+div.aboutMe {
     text-align: center;
+    color: red;
+    background-color: white;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    transition: background-color 4s ease-out;
+    transition: color 2s ease-out;
 }
+div.aboutMe:hover {
+    color: white;
+    background-color: red;
+    transition: background-color 4s ease-out;
+    transition: color 2s ease-out;
+}
+
 .banner {
+    color: red;
+    transition: color 2s ease-out;
     background-color: yellow;
+    transition: background-color 2s ease-out;
     width: 100%;
     box-sizing: border-box;
 }
+.banner:hover {
+    color: yellow;
+    transition: color 2s ease-out;
+    background-color: red;
+    transition: background-color 2s ease-out;
+}
+
 h1 {
     font-size: 3em;
 }
+
 main div.row {
     background-color: red;
+    transition: background-color 2s ease-out;
 }
-footer {
+
+main div.row:hover {
     background-color: yellow;
+    transition: background-color 2s ease-out;
+}
+
+footer {
+    margin-top: 0;
+    background-color: yellow;
+    transition: background-color 2s ease-out;
+}
+footer:hover {
+    background-color: red;
+    transition: background-color 2s ease-out;
 }
 .img-responsive {
     min-width: 20px;
     max-width: 40px;
 }
+
 article {
     width: 275px;
+}
+img#luigi {
+    width: auto;
+    transition: width 3s ease-out;
+}
+img#luigi:hover {
+    width: 450px;
+    transition: width 3s ease-out;
 }

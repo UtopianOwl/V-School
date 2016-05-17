@@ -1,5 +1,6 @@
 A simple, one-page, website which displays the enemies Mario has caught as well as their value.
 There are also a few drop-up boxes to contain contact information.
+
 It was designed by Drew Nauman as part of the curriculum for the V-School full-stack web development bootcamp.
 
 The site uses bootstrap for css formatting

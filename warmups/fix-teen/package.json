@@ -1,0 +1,17 @@
+{
+  "name": "fix-teen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fix-teen.js",
+  "dependencies": {
+    "karma": "^0.13.22",
+    "readline-sync": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

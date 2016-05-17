@@ -1,0 +1,88 @@
+@font-face {
+    font-family: bimasakti;
+    src: url(bimasakti.otf);
+}
+
+@font-face {
+    font-family: highscore;
+    src: url(HighscoreHero.woff);
+}
+
+body {
+    background-image: url(backdrop.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-size: 16px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: "bimasakti", sans-serif;
+    font-size: 5em;
+    color: #222;
+    text-shadow: 3px 3px #bbb;
+    position: fixed;
+    top: 1em;
+    right: 2em;
+}
+
+button#new {
+    margin: 0;
+    border: 0;
+    position: fixed;
+    top: 80%;
+    right: 30%;
+    font-family: "bimasakti", sans-serif;
+    font-size: 3em;
+    color: #222;
+    text-shadow: 3px 3px #bbb;
+    background-color: transparent;
+}
+
+form {
+    display: none;
+    margin: 6em auto 0 auto;
+    padding: 2em;
+    width: 200px;
+    height: 275px;
+    border: 4px solid ghostwhite;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgba(20, 20, 20, .7)
+}
+
+.newScore {
+    display: block;
+    margin: 0 auto;
+}
+
+span {
+    color: ghostwhite;
+    padding-left: 10px;
+}
+
+article {
+    position: fixed;
+    top: 3em;
+    left: 3em;
+    max-width: 600px;
+}
+
+table {
+    font-family: "highscore";
+    font-size: 1em;
+    color: ghostwhite;
+    max-height: 500px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    background-color: rgba(20, 20, 20, .7)
+}
