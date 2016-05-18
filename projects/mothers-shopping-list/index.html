@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mother's Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -12,13 +13,14 @@
     </header>
     <main>
         <form name="momList">
-            <input type="text">
-            <button class="add"></button>
+            <input id="newItem" type="text" required>
+            <input type="submit" id="add" value="Add" class="add">
         </form>
-        <div>
-            <ul></ul>
+        <div class="shoppingList">
+            <ul id="list" class="shoppingList"></ul>
         </div>
     </main>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="main.js"></script>
 </body>
-
 </html>
