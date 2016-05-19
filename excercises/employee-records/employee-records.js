@@ -16,19 +16,19 @@ function Employee(name, jobTitle, salary) {
         employees.push(this);
     }
 }
-//instanciating a new employww, manually overriding the status property,
+//instantiating a new employee, manually overriding the status property,
 //then running the two methods to "log" him
 var peter = new Employee('Peter Gibbons', 'Constuction Worker', 30000);
 peter.status = 'contract';
 peter.printEmployeeForm();
 peter.add();
 
-//instanciating a new employww, then running the two methods to "log" him
+//instantiating a new employee, then running the two methods to "log" him
 var michael = new Employee('Michael Bolton', 'Programmer', 60000);
 michael.printEmployeeForm();
 michael.add();
 
-//instanciating a new employww, then running the two methods to "log" him
+//instantiating a new employee, then running the two methods to "log" him
 var samir = new Employee('Samir Nagheenanajar', '"Programmer', 55000);
 samir.printEmployeeForm();
 samir.add();

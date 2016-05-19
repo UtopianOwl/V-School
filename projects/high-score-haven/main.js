@@ -1,9 +1,8 @@
-var tableStart;
+var tableStart = [];
 
 // To retrieve this object from web storage:
-function loadScores() {
+$(document).ready(function () {
     tableStart = JSON.parse(localStorage.getItem('tableStart'));
-    console.log(tableStart);
     var tr0 = document.createElement("TR");
     for (var n in tableStart) {
         var td0 = document.createElement("TD");
@@ -13,7 +12,7 @@ function loadScores() {
     }
 
     document.getElementById("scoresTable").appendChild(tr0);
-}
+});
 
 // Constructor function to create High Score Objects
 function HighScore(name, game, date, score, trash) {

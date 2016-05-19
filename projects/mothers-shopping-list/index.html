@@ -12,8 +12,8 @@
         <h1>Mother's Shopping List</h1>
     </header>
     <main>
-        <form name="momList">
-            <input id="newItem" type="text" required>
+        <form name="momList" id="momList" onsubmit="preventDefault()">
+            <input id="newItem" name="newItem" type="text" required>
             <input type="submit" id="add" value="Add" class="add">
         </form>
         <div class="shoppingList">
@@ -21,6 +21,6 @@
         </div>
     </main>
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

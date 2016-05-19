@@ -1,16 +1,42 @@
+var saveList = [];
 $(document).ready(function () {
-    $('#add').click(function (event) {
-        event.preventDefault();
-        var newItem = document.momList.newItem.value;
-        if (newItem) {
-            var $listItem = $('<li id="' + newItem + '"><button class="delete">X</button></li>');
-            var $item = $('<span class="item">').text(newItem);
-            $listItem.append($item);
-            $('#list').append($listItem);
+    if (JSON.parse(localStorage.getItem('saveList'))) {
+        saveList = JSON.parse(localStorage.getItem('saveList'));
+        for (var i = 0; i < saveList.length; i++) {
+            var newListItem = $('<li></li>');
+            var newListButton = $('<button class="delete"></button>').text("X");
+            var newListSpan = $('<span class="item"></span>').text(saveList[i]);
+            newListItem.append(newListButton);
+            newListItem.append(newListSpan);
+            $('#list').append(newListItem);
         }
-    });
-    $('.delete').click(function () {
-        console.log("im here");
-        $(this).parent().remove();
-    });
+    }
+});
+
+$(document).on("click", "#add", function (event) {
+    event.preventDefault();
+    var addItem = $('#newItem').val();
+    if (addItem) {
+        var newListItem = $('<li></li>');
+        var newListButton = $('<button class="delete"></button>').text("X");
+        var newListSpan = $('<span class="item"></span>').text(addItem);
+        newListItem.append(newListButton);
+        newListItem.append(newListSpan);
+        $('#list').append(newListItem);
+        saveList.push(addItem);
+        console.log(saveList);
+        localStorage.clear();
+        localStorage.setItem('saveList', JSON.stringify(saveList));
+    }
+    document.momList.reset();
+});
+
+$(document).on("click", ".delete", function (event) {
+    var thisListItem = $(event.target).parent();
+    var index = $(event.target).parent().index();
+    saveList.splice(index, 1);
+    localStorage.clear();
+    localStorage.setItem('saveList', JSON.stringify(saveList));
+    thisListItem.remove();
+
 });

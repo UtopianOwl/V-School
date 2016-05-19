@@ -1,8 +1,9 @@
-single page with several rectangular objects of varying colors; practice aligning objects in css.
+Single page with several rectangular objects of varying colors; practice aligning objects in css.
+
 It was designed by Drew Nauman as part of the curriculum for the V-School full-stack web development bootcamp.
 
 
-the original assignment is below:
+The original assignment is below:
 
 # Color Grid From Scratch
 16 SEPTEMBER 2015 on Static Websites, Exercise, Warmup, Level 2

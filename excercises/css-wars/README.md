@@ -1,5 +1,6 @@
 # CSS-WARS: THE SELECTOR AWAKENS
 Static webpage to practice css selectors
+
 It was designed by Drew Nauman as part of the curriculum for the V-School full-stack web development bootcamp.
 
 ## Original instructions:
