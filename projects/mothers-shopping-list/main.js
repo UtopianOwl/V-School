@@ -1,4 +1,5 @@
 var saveList = [];
+document.momList.newItem.focus();
 $(document).ready(function () {
     if (JSON.parse(localStorage.getItem('saveList'))) {
         saveList = JSON.parse(localStorage.getItem('saveList'));
@@ -14,9 +15,10 @@ $(document).ready(function () {
 });
 
 $(document).on("click", "#add", function (event) {
-    event.preventDefault();
+    
     var addItem = $('#newItem').val();
     if (addItem) {
+        event.preventDefault();
         var newListItem = $('<li></li>');
         var newListButton = $('<button class="delete"></button>').text("X");
         var newListSpan = $('<span class="item"></span>').text(addItem);
@@ -24,7 +26,6 @@ $(document).on("click", "#add", function (event) {
         newListItem.append(newListSpan);
         $('#list').append(newListItem);
         saveList.push(addItem);
-        console.log(saveList);
         localStorage.clear();
         localStorage.setItem('saveList', JSON.stringify(saveList));
     }
