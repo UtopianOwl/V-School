@@ -1,6 +1,4 @@
 var app = angular.module('playerApp', []);
-var player = {};
-    player.kills = [];
 
 var names1 = ['Farinant', 'Feragorma', 'FighterDj', 'Flownpl', 'Forbushuma', 'FraserWoman', 'Freedsetch', 'Gallerson', 'Georgas', 'Glossbo', 'Grandista', 'GuantoIs', 'Harterment', 'HartMs', 'HiConn', 'Hugzhopper', 'HumanBoard', 'Chiquita', 'Huntocked', 'Iamaindata', 'Ideallywh', 'Ightligh', 'InfernoBoost', 'IntcatLaw', 'Ionisered', 'Itilinell', 'Joshershar', 'JuzGlossy', 'Kehiveni', 'KenjiTary'];
 var names2 = ['KiddoTabSaren', 'KidGiggly', 'KroolVampLadycept', 'LeonTalent', 'Letteriumg', 'Lillismit', 'ListBoboNaybor', 'Livemcm', 'Lotsontr', 'LouThin', 'LovesLeonSmarter', 'LudaBloomRecipe', 'Ludantalkr', 'Madevolati', 'Marquette', 'Marxodego', 'Maryserte', 'MilkSocial2hot', 'NozyReader', 'Actitele', 'Activetsto', 'Aetionius', 'Agiterst', 'AllyScooby', 'Anguristeum', 'Annashleart', 'Apeironym', 'AshDj', 'Babixzakar', 'BadTainted'];
@@ -34,13 +32,13 @@ function clan() {
     clanArray = [name1, name2, name3];
     return clanArray;
 }
-for (var i = 0; i < 15; i++) {
-        var killed = new Player(handle, rank, clan);
-        player.kills.push(killed);
-    }
+
 app.controller('playerCtrl', ['$scope', function ($scope) {
     $scope.player = {
         kills: []
     }
-
+for (var i = 0; i < 15; i++) {
+        var killed = new Player(handle, rank, clan);
+        $scope.player.kills.push(killed);
+}
 }]);

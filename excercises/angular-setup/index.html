@@ -9,9 +9,9 @@
 <body ng-app="playerApp" ng-controller="playerCtrl">
     <div ng-repeat="kill in player.kills">
         <h1>{{kill.handle}}</h1>
-        <h1>{{kill.rank}}</h1>
+        <h3>{{kill.rank}}</h3>
         <div ng-repeat="clan in kill.clan">
-            <h2>{{clan}}</h2>
+            <p>{{clan}}</p>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
