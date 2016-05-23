@@ -1,0 +1,31 @@
+@media only screen and (min-width: 480px) {
+    div.instaContainer {
+        width: 24%;
+    }
+}
+
+@media only screen and (min-width: 670px) {
+    div.instaContainer {
+        width: 9.5%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    div.sidebarBox, div.archives {
+        width: 220px;
+    }
+    img.favoritesLogo {
+        width: 218px;
+    }
+    i.fa-envelope {
+        top: 28px;
+        right: 24px;
+    }
+    i.fa-envelope.sidebar {
+        top: 8px;
+    }
+}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {}

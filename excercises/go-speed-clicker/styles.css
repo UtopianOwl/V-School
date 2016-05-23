@@ -1,0 +1,17 @@
+body {
+    background: url(speed-racer.jpg) no-repeat fixed center center;
+}
+h1 {
+    position: fixed;
+    color: white;
+    bottom: 70px;
+    left: 100px;
+    font-size: 72px;
+}
+h2 {
+    position: fixed;
+    color: white;
+    top: -15px;
+    right: 30px;
+    font-size: 50px;
+}

@@ -1,8 +1,23 @@
-html, body, div.conatiner, div#navRow,{
+@font-face {
+    font-family: "Bebas Neue Light";
+    src: url('_fonts/BebasNeue Light.otf');
+}
+
+@font-face {
+    font-family: "Bebas Neue Regular";
+    src: url('_fonts/BebasNeue Regular.otf');
+}
+
+html,
+body,
+div.conatiner,
+div#navRow,
+{
     width: 100%;
     margin: 0px 0px;
     padding: 0px 0px;
 }
+
 .container {
     padding-left: 0px;
     padding-right: 0px;
@@ -11,9 +26,425 @@ html, body, div.conatiner, div#navRow,{
     width: 100%;
 }
 
+
+/* NavBar Styles */
+
+nav {
+    height: 72px;
+}
+
+div#navRow * {
+    background-color: white;
+}
+
+div#navrow {
+    height: 72px;
+    margin-bottom: -20px;
+}
+
 a.navbar-brand {
     padding-top: 0px;
 }
-nav {
+
+img#logo {
+    margin-top: 16px;
+    margin-left: 10px;
+}
+
+ul.navbar-nav {
+    margin-top: 10px;
+}
+
+input#search {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+i.fa-search {
+    position: absolute;
+    right: 8px;
+    top: 20px;
+    color: #909090;
+}
+div.subscribe.search {
+    position: relative;
+    width: 172px;
+}
+
+/* Splash Carousel Styles */
+
+div.splash {
+    margin-top: -20px;
+}
+
+
+/* Salmon Bar styles */
+
+div#salmonBar {
     height: 72px;
+    background-color: #f3c3ac;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div#salmonBar div.subscribe {
+    margin-top: 20px;
+    border: #E2E2E2 1px solid;
+}
+
+div.subscribe {
+    width: 100%;
+    height: 33px;
+    line-height: 30px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+div.subscribe.sidebar {
+    position: relative;
+}
+
+input.subscribe {
+    border: none;
+    font-style: italic;
+}
+
+i.fa-envelope {
+    font-size: 17px;
+    color: #909090;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+i.fa-envelope.sidebar {
+    right: 10px;
+}
+
+
+/* Content meta styling */
+
+main.content {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 60px;
+}
+
+aside.content {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 100px;
+}
+
+aside.content div.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Styles for blog post */
+
+article {
+    margin-bottom: 64px;
+}
+
+
+/* title styling */
+
+h2.postDate {
+    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    color: #999999;
+    margin: 0 0 1px 0;
+    font-weight: 200;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+}
+h2.postDate:before,
+h2.postDate:after {
+   content: "   ";
+   display: inline-block;
+   max-width: 80px;
+   width: 15%;
+   border-bottom: 1px solid #ddd;
+   line-height: 18px;
+   vertical-align: middle;
+}
+h1.blogTitle {
+    font-size: 36px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin: 24px 0 19px;
+    text-align: center;
+    font-family: "Bebas Neue Regular", cursive, sans-serif;
+    color: #000;
+    text-transform: uppercase;
+}
+a:hover {
+    text-decoration: none;
+}
+h1.blogTitle:hover {
+    text-decoration: none;
+    color: #f3c3ac;
+}
+h3.postCat {
+    color: #999;
+    font-weight: 200;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Avenir", sans-serif;
+    font-style: italic;
+}
+h3.postCat:hover {
+    text-decoration: underline;
+    text-decoration-color: #999;
+}
+
+/* Post styling */
+
+article main img:hover {
+    opacity: 0.7;
+}
+p.blogPost {
+    margin: 16px 0;
+}
+
+a.readMore {
+    margin: 32px auto 0;
+    width: 106px;
+    display: block;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    color: #ccc;
+    font-family: "Bebas Neue Light", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: normal;
+    transition: background-color .2s;
+    background-color: transparent;
+    letter-spacing: .1em;
+}
+
+a.readMore:hover {
+    text-decoration: none;
+    background-color: #9b9b9b;
+    color: #fff;
+}
+
+
+/* Post footer styles */
+
+article footer {
+    margin-top: 32px;
+}
+
+span.commments {
+    text-align: right;
+    color: #545454;
+    font-family: "Avenir", sans-serif;
+    font-size: 13px;
+}
+
+span a {
+    color: #000;
+}
+
+span a:hover {
+    color: #f3c3ac;
+    text-decoration: underline;
+    text-decoration-color: #f3c3ac;
+}
+
+footer i.fa {
+    font-size: 30px;
+    color: #f3c3ac;
+    letter-spacing: 1em;
+}
+
+a.instaFeed {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+h1.relatedHeader {
+    display: block;
+    font-family: "Bebas Neue Light";
+    color: #000;
+    background-color: #fff;
+    margin: -11px auto 0px;
+    font-size: 24px;
+    padding: 0 5px;
+    font-weight: normal;
+    width: 85px;
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.relatedBox {
+    margin-top: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+img.relatedThumbnail {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* aside styles */
+
+
+/* Style aside boxes and headers */
+
+div.sidebarBox {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+h1.sidebarHeader {
+    color: #000;
+    font-family: "Bebas Neue Light";
+    text-align: center;
+    font-size: 21px;
+    padding: 0 5px;
+    letter-spacing: .1em;
+    background-color: #FFF;
+    margin: -11px auto 0px;
+}
+
+h1#follow {
+    width: 78px;
+}
+
+h1#subscribe {
+    width: 90px;
+}
+
+h1#wishlist {
+    width: 78px;
+}
+
+h1#favorites {
+    width: 90px;
+}
+
+
+/* style box content */
+
+.carousel-control,
+.carousel-control.left,
+.carousel-control.right,
+.carousel-control:hover,
+.carousel-control.left:hover,
+.carousel-control.right:hover {
+    background-image: none;
+}
+
+img.wishlist {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img.favoritesLogo {
+    width: 100%;
+}
+
+span.glyphicon-chevron-right,
+span.glyphicon-chevron-left,
+ol.carousel-indicators {
+    color: black;
+}
+
+div.archives {
+    width: 100%;
+    height: 33px;
+    line-height: 30px;
+    background-color: white;
+    box-sizing: border-box;
+    border: #c0c0c0 1px solid;
+}
+
+select#archives {
+    background: transparent;
+    border: none;
+    color: #a0a0a0;
+    font-style: italic;
+    width: 100%;
+}
+
+img.down {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+
+/* Style the instagram feed */
+
+div.insta {
+    margin-top: 60px;
+}
+
+main.insta {
+    margin-top: 20px;
+}
+
+h2#insta {
+    color: black;
+    font-family: "Bebas Neue Light", sans-serif;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+div.instaContainer {
+    position: relative;
+    width: 100%;
+    /* desired width */
+    display: inline-block;
+}
+
+div.instaContainer:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
+}
+
+a.instaFeed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* Page Footer */
+
+footer.pageFooter {
+    height: 37px;
+    background-color: black;
+    color: #bbb;
+    font-size: 11px;
+    font-family: "avenir", sans-serif;
+    margin-top: 60px;
+    padding-top: 10px;
+}
+
+footer.pageFooter a {
+    color: #BBB;
+    text-decoration: underline;
 }

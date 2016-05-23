@@ -34,7 +34,7 @@ $(document).on("click", "#add", function (event) {
 
 $(document).on("click", ".delete", function (event) {
     var thisListItem = $(event.target).parent();
-    var index = $(event.target).parent().index();
+    var index = thisListItem.index();
     saveList.splice(index, 1);
     localStorage.clear();
     localStorage.setItem('saveList', JSON.stringify(saveList));

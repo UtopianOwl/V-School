@@ -5,30 +5,49 @@
     <meta charset="UTF-8">
     <title>K and J Diaries</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div id="navRow" class="row">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="navbar-header col-sm-3">
-                            <a class="navbar-brand" href="#"><img alt="Brand" class="logo img-responsive" src="http://kandjdiaries.com/wp-content/themes/k_and_j/img/logo-h.png"></a>
+                            <a class="navbar-brand" href="http://kandjdiaries.com/"><img alt="Brand" id="logo" src="http://kandjdiaries.com/wp-content/themes/k_and_j/img/logo-h.png"></a>
                         </div>
-                        <div class="col-sm-9 col-md-7 hidden-xs">
+                        <div class="col-sm-7 col-sm-offset-2 col-md-5 col-md-offset-1 hidden-xs">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Categories</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="http://kandjdiaries.com/category/fashion/">Fashion</a></li>
+                                        <li><a href="http://kandjdiaries.com/category/beauty/">Beauty</a></li>
+                                        <li><a href="http://kandjdiaries.com/category/lifestyle/">Lifestyle</a></li>
+                                        <li><a href="http://kandjdiaries.com/category/maternity-chic/">Maternity Chic</a></li>
+                                        <li><a href="http://kandjdiaries.com/category/recipes/">Recipes</a></li>
+                                    </ul>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="http://kandjdiaries.com/bio/">Bio</a></li>
+                                            <li><a href="http://kandjdiaries.com/press/">Press</a></li>
+                                            <li><a href="http://kandjdiaries.com/faq/">FAQ</a></li>
+                                        </ul>
+                                        <li><a href="http://kandjdiaries.com/shop/">Shop</a></li>
+                                        <li><a href="http://kandjdiaries.com/contact/">Contact</a></li>
                             </ul>
-                            <form class="navbar-form navbar-right col-md-2 hidden-sm" role="search">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <div class="col-md-2 col-md-offset-1 hidden-sm">
+                            <form class="navbar-form" role="search">
+                                <div class="subscribe search">
+                                    <input id="search" type="text" class="form-control" placeholder="Search">
+                                    <i class="fa fa-search"></i>
                                 </div>
                             </form>
                         </div>
@@ -36,209 +55,674 @@
                 </div>
             </nav>
         </div>
-        <div class="row">
-            <img src="" alt="">
+        <div class="row splash">
+            <div id="splashCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#splashCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#splashCarousel" data-slide-to="1"></li>
+                    <li data-target="#splashCarousel" data-slide-to="2"></li>
+                    <li data-target="#splashCarousel" data-slide-to="3"></li>
+                    <li data-target="#splashCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2014/10/k-and-j-diaries-photoshoot-sitting-b-and-w1.jpg" alt="Chania">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2014/10/k-and-j-diaries-photoshoot-standing-b-and-w-wide.png" alt="Chania">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2014/10/k-and-j-diaries-photoshoot-cafe-wide.png" alt="Flower">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2014/10/k-and-j-diaries-photoshoot-sitting-color-wide.png" alt="Flower">
+                    </div>
+                    <div class="item">
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2016/03/fusiodose-kerastase1.jpg" alt="Flower">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="salmonBar" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="subscribe">
+                    <input class="subscribe" type="email" placeholder="Subscribe by Email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
         <div class="row">
-            <input type="text">
-        </div>
-        <div class="row">
-            <main class="col-sm-8">
+            <main class="content col-sm-8 col-md-7">
                 <article>
                     <header>
-                        <h2>May 11, 2016</h2>
-                        <h1><a>My Top Nude Lipsticks</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">May 20, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/05/the-skin-care-products-i-use-all-year-long/"><h1 class="blogTitle">The Skin Care Products I Use All Day Long</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
+                    </header>
+                    <main>
+                        <img src="http://kandjdiaries.com/wp-content/uploads/2016/05/skin8.jpg" alt="Skin 8" class="blogImage img-responsive">
+                        <p class="blogPost">The benefits or using a primer before your foundation are too many to list, but here are two main reasons why you should think about using them if you haven’t already: You makeup goes on a lot smoother when you have a nice smooth canvas underneath and your foundation will stay put all day (or […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/05/the-skin-care-products-i-use-all-year-long/">Read More</a>
+                    </main>
+                    <footer>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fthe-skin-care-products-i-use-all-year-long%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fthe-skin-care-products-i-use-all-year-long%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fskin8-683x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fthe-skin-care-products-i-use-all-year-long%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/05/the-skin-care-products-i-use-all-year-long/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/08/must-have-facial-maks/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/08/facial-masks2-120x120.jpg" alt="Facial Masks 2" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/03/chemical-peel/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/03/chemical-peel-3-120x120.jpg" alt="Chemical Peel 3" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/04/get-firm-skin-and-get-rid-of-cellulite-with-this-one-step/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/04/legs-post-120x120.jpg" alt="Legs Post" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/03/spring-foundation-routine/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/03/DSC_0165-120x120.jpg" alt="DSC 0165" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h2 class="postDate">May 11, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/05/my-top-nude-lipsticks/"><h1 class="blogTitle">My Top Nude Lipsticks</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/05/nude-lips5.jpg" alt="Nude Lips 5" class="blogImage img-responsive">
-                        <p class="blogPost">When it comes to nude lipsticks I prefer those with a hint of pink (I do have a few with peach undertones that I also love).  Anything too neutral makes me look dead because I naturally don’t have much color on my lips to begin with plus my skin is brown.  I’m always looking to […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">When it comes to nude lipsticks I prefer those with a hint of pink (I do have a few with peach undertones that I also love). Anything too neutral makes me look dead because I naturally don’t have much color on my lips to begin with plus my skin is brown. I’m always looking to […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/05/my-top-nude-lipsticks/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmy-top-nude-lipsticks%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmy-top-nude-lipsticks%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fnude-lips4-1024x988.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmy-top-nude-lipsticks%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/05/my-top-nude-lipsticks/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/08/must-have-facial-maks/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/08/facial-masks2-120x120.jpg" alt="Facial Masks 2" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/04/your-hair-assistant/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC_0171-120x120.jpg" alt="DSC 0171" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/05/top-5-foundations/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/05/top-5-foundations-collage-120x120.jpg" alt="Top 5 Foundations Collage" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/03/the-perfect-hair-treatment-for-dry-and-bleached-hair/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/03/IMG_8788-120x120.jpg" alt="IMG 8788" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>May 09, 2016</h2>
-                        <h1><a>Mother's Day Weekend</a></h1>
-                        <h3><a>Lifestyle</a></h3>
+                        <h2 class="postDate">May 09, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/05/mothers-day-weekend/"><h1 class="blogTitle">Mother's Day Weekend</h1></a>
+                        <a href="http://kandjdiaries.com/category/lifestyle/"><h3 class="postCat">Lifestyle</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/05/DSC_0168.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">Happy Mother’s Day to all the mom’s out there.  What an amazing blessing it is to be a Mother.  I cherish the minutes/hours/days/years I get to spend with my children.  My husband and the kids really spoiled me this year.  We have been celebrating Mother’s day since last weekend!  Today’s breakfast was just too pretty […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">Happy Mother’s Day to all the mom’s out there. What an amazing blessing it is to be a Mother. I cherish the minutes/hours/days/years I get to spend with my children. My husband and the kids really spoiled me this year. We have been celebrating Mother’s day since last weekend! Today’s breakfast was just too pretty […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/05/mothers-day-weekend/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmothers-day-weekend%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmothers-day-weekend%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F05%2FDSC_01681-683x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fmothers-day-weekend%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/05/mothers-day-weekend/#comments">1</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/12/family-celebrations-part-1/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/12/IMG_9865-120x120.jpg" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2014/12/christmas-gift-for-co-workers-2/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/12/coworker1-120x120.jpg" alt="Coworker 1" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/01/mayan-underworld-caves/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/01/rio-secreto13-120x120.jpg" alt="Rio Secreto 13" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/04/the-importance-of-looking-back-at-old-photos/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC_00251-120x120.jpg" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>May 04, 2016</h2>
-                        <h1><a>What to Get your Mama for Mother's Day</a></h1>
-                        <h3><a>Fashion</a></h3>
+                        <h2 class="postDate">May 04, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/05/what-to-get-your-mama-for-mothers-day/"><h1 class="blogTitle">What to Get your Mama for Mother's Day</h1></a>
+                        <a href="http://kandjdiaries.com/category/fashion/"><h3 class="postCat">Fashion</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/05/Mothers-Day-Gift-guide.jpg" alt="Mothers Day Gift Guide" class="blogImage img-responsive">
-                        <p class="blogPost">1   |   2   |   3   |   4   |   5   |   6   |   7   |   8 Has it really been almost almost 8 years since I become a mom?! it’s actually longer than 8 years if you count the 9 months of […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Has it really been almost almost 8 years since I become a mom?! it’s actually longer than 8 years if you count the 9 months of […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/05/what-to-get-your-mama-for-mothers-day/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fwhat-to-get-your-mama-for-mothers-day%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fwhat-to-get-your-mama-for-mothers-day%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F05%2FMothers-Day-Gift-guide-1024x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F05%2Fwhat-to-get-your-mama-for-mothers-day%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/05/what-to-get-your-mama-for-mothers-day/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/10/bright-autumn/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/10/bright-autumn-1-120x120.jpg" alt="Bright Autumn 1" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2014/12/holiday-gift-guide-for-him/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/12/holiday-gift-guide-for-him-2-120x120.jpg" alt="Hoiday Gift Guide for Him" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/02/street-style-sneakers/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/02/sneakers-120x120.jpg" alt="Sneakers" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/03/spring-has-arrived/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/03/spring-has-arrived-collage-120x120.jpg" alt="Spring Has Arrived Collage" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>Apr 25, 2016</h2>
-                        <h1><a>Your Hair Assistant</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">Apr 25, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/04/your-hair-assistant/"><h1 class="blogTitle">Your Hair Assistant</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC_0171.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">Hair by: Pureza Spa This past Thursday I was invited to be part of the launch of Davines’ new line “Your Hair Assistant”.  This is more than just a catchy name.  The products do actually assist you with your hair issues! It was created by internationally acclaimed hairdresser Angelo Seminara with the help of the Davines […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">Hair by: Pureza Spa This past Thursday I was invited to be part of the launch of Davines’ new line “Your Hair Assistant”. This is more than just a catchy name. The products do actually assist you with your hair issues! It was created by internationally acclaimed hairdresser Angelo Seminara with the help of the Davines […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/04/your-hair-assistant/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fyour-hair-assistant%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fyour-hair-assistant%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F04%2FDSC_0171-683x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fyour-hair-assistant%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/04/your-hair-assistant/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/08/must-have-facial-maks/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/08/facial-masks2-120x120.jpg" alt="Facial Masks 2" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/05/top-5-foundations/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/05/top-5-foundations-collage-120x120.jpg" alt="Top 5 Foundations Collage" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/03/the-perfect-hair-treatment-for-dry-and-bleached-hair/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/03/IMG_8788-120x120.jpg" alt="IMG 8788" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/04/is-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC05205-120x120.jpg" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>Apr 22, 2016</h2>
-                        <h1><a>The Importance of Looking Back at Old </a></h1>
-                        <h3><a>Lifestyle</a></h3>
+                        <h2 class="postDate">Apr 22, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/04/the-importance-of-looking-back-at-old-photos/"><h1 class="blogTitle">The Importance of Looking Back at Old </h1></a>
+                        <a href="http://kandjdiaries.com/category/lifestyle/"><h3 class="postCat">Lifestyle</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC_00251.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">Sometime life is overwhelming.  Sometimes you have a hard week or a great week! Life is constantly up and down and we all know that we cannot control all the circumstances or events that happen in our lives… We have been told many times that the only thing we have full control of is […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">Sometime life is overwhelming. Sometimes you have a hard week or a great week! Life is constantly up and down and we all know that we cannot control all the circumstances or events that happen in our lives… We have been told many times that the only thing we have full control of is […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/04/the-importance-of-looking-back-at-old-photos/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fthe-importance-of-looking-back-at-old-photos%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fthe-importance-of-looking-back-at-old-photos%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F04%2FDSC_0021-1024x683.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fthe-importance-of-looking-back-at-old-photos%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/04/the-importance-of-looking-back-at-old-photos/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/10/fall-family-traditions/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/10/DSC_0008-copy-120x120.jpg" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2014/12/family-celebrations-part-1/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/12/IMG_9865-120x120.jpg" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/01/new-years-resolutions/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/01/new-year9-copy-120x120.jpg" alt="New Year 9" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/07/happy-4th-of-july/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/07/4th-of-july12-120x120.jpg" alt="4th of July 12" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>Apr 10, 2016</h2>
-                        <h1><a>Is the Marc Jacobs Re(Mark)able Foundation Right For Your Skin Type?</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">Apr 10, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/04/is-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type/"><h1 class="blogTitle">Is the Marc Jacobs Re(Mark)able Foundation Right For Your Skin Type?</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/04/DSC05205.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">I have talked about my feelings towards this foundation a few times on Snapchat.  I have never tried a full coverage foundation that had as much pigment as this one!  The Marc Jacobs Re(mark)able foundation is very unique.  I have heard a few people say that it’s a medium to full coverage foundation. NO WAY! […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">I have talked about my feelings towards this foundation a few times on Snapchat. I have never tried a full coverage foundation that had as much pigment as this one! The Marc Jacobs Re(mark)able foundation is very unique. I have heard a few people say that it’s a medium to full coverage foundation. NO WAY! […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/04/is-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fis-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fis-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F04%2FDSC05208-768x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F04%2Fis-the-marc-jacobs-remarkable-foundation-right-for-your-skin-type%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2013/12/winter-makeup-tutorial/"><img src="http://kandjdiaries.com/wp-content/uploads/2013/12/winter-makeup-tutorial-mychicbump-682x1024-120x120.jpg" alt="Winter Makeup Tutorial" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2016/03/spring-foundation-routine/"><img src="http://kandjdiaries.com/wp-content/uploads/2016/03/DSC_0165-120x120.jpg" alt="DSC 0165" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/03/chemical-peel/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/03/chemical-peel-3-120x120.jpg" alt="Chemical Peel 3" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/12/my-i-cant-live-without-hair-products/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/12/hair-care2-120x120.jpg" alt="Hair Care 2" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>Mar 28, 2016</h2>
-                        <h1><a>The Perfect Hair Treatment for Dry and Bleached Hair</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">Mar 28, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/03/the-perfect-hair-treatment-for-dry-and-bleached-hair/"><h1 class="blogTitle">The Perfect Hair Treatment for Dry and Bleached Hair</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/03/IMG_8788.jpg" class="blogImage img-responsive">
-                        <p class="blogPost"> I originally made an appointment at Pureza Spa for a blowout.  No matter how many times I practice, I can never get a nice blowout like how they do it at the salon! So after weeks and weeks of not coming in for any treatments I decided to take an hour to myself and […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost"> I originally made an appointment at Pureza Spa for a blowout. No matter how many times I practice, I can never get a nice blowout like how they do it at the salon! So after weeks and weeks of not coming in for any treatments I decided to take an hour to myself and […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/03/the-perfect-hair-treatment-for-dry-and-bleached-hair/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fthe-perfect-hair-treatment-for-dry-and-bleached-hair%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fthe-perfect-hair-treatment-for-dry-and-bleached-hair%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F03%2Ffusiodose-kerastase1.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fthe-perfect-hair-treatment-for-dry-and-bleached-hair%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="http://kandjdiaries.com/2016/03/the-perfect-hair-treatment-for-dry-and-bleached-hair/#comments">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2014/10/how-to-braided-crown-hair-tutorial/"><img src="http://kandjdiaries.com/wp-content/uploads/2014/10/braided-crown11-120x120.jpg" alt="Braided Crown Hair Tutorial" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/01/tropical-vacation-ready-kerastase/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/01/kerastase4-120x120.jpg" alt="Kerastase 4" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/08/from-brunette-to-blonde/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/08/new-look-120x120.jpg" alt="New Look" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/12/my-i-cant-live-without-hair-products/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/12/hair-care2-120x120.jpg" alt="Hair Care 2" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2></h2>
-                        <h1><a></a></h1>
-                        <h3><a></a></h3>
-                    </header>
-                    <main>
-                        <img src="" alt="" class="blogImage img-responsive">
-                        <p class="blogPost"></p>
-                        <button class="readMore">Read More</button>
-                    </main>
-                    <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                    </footer>
-                </article>
-                <article>
-                    <header>
-                        <h2>Mar 22, 2016</h2>
-                        <h1><a>5 Bronzers that I Swear by</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">Mar 22, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/03/5-bronzers-that-i-swear-by/"><h1 class="blogTitle">5 Bronzers that I Swear by</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/03/DSC_0028.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">Estee Lauder Bronze Goddess Powder My current favorite bronzer is this one. You can adjust the amount of coverage you want and it blends wonderfully. No orange tones or sparkles! Yet there is a hint of glow to it.  It’s absolutely perfect.  This is my “everyday” kind of bronzer. One of the best inventions in […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">Estee Lauder Bronze Goddess Powder My current favorite bronzer is this one. You can adjust the amount of coverage you want and it blends wonderfully. No orange tones or sparkles! Yet there is a hint of glow to it. It’s absolutely perfect. This is my “everyday” kind of bronzer. One of the best inventions in […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/03/5-bronzers-that-i-swear-by/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2F5-bronzers-that-i-swear-by%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2F5-bronzers-that-i-swear-by%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F03%2FDSC_0028-1024x683.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2F5-bronzers-that-i-swear-by%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2013/12/winter-makeup-tutorial/"><img src="http://kandjdiaries.com/wp-content/uploads/2013/12/winter-makeup-tutorial-mychicbump-682x1024-120x120.jpg" alt="Winter Makeup Tutorial" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/05/top-5-foundations/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/05/top-5-foundations-collage-120x120.jpg" alt="Top 5 Foundations Collage" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/11/dewy-skin-101/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/10/IMG_5171-120x120.jpg" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/12/my-i-cant-live-without-hair-products/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/12/hair-care2-120x120.jpg" alt="Hair Care 2" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
                 <article>
                     <header>
-                        <h2>Mar 16, 2016</h2>
-                        <h1><a>Spring Foundation Routine</a></h1>
-                        <h3><a>Beauty</a></h3>
+                        <h2 class="postDate">Mar 16, 2016</h2>
+                        <a href="http://kandjdiaries.com/2016/03/spring-foundation-routine/"><h1 class="blogTitle">Spring Foundation Routine</h1></a>
+                        <a href="http://kandjdiaries.com/category/beauty/"><h3 class="postCat">Beauty</h3></a>
                     </header>
                     <main>
                         <img src="http://kandjdiaries.com/wp-content/uploads/2016/03/DSC_0165.jpg" class="blogImage img-responsive">
-                        <p class="blogPost">Who doesn’t want luminous skin? Spring is the perfect season to stick to the basics and to put away your heavy makeup and go for a more spring/fresh look don’t you think?  We all know that makeup looks best when your skin is well taken care of.  I will go into details about my current […]</p>
-                        <button class="readMore">Read More</button>
+                        <p class="blogPost">Who doesn’t want luminous skin? Spring is the perfect season to stick to the basics and to put away your heavy makeup and go for a more spring/fresh look don’t you think? We all know that makeup looks best when your skin is well taken care of. I will go into details about my current […]</p>
+                        <a class="readMore center-block" href="http://kandjdiaries.com/2016/03/spring-foundation-routine/">Read More</a>
                     </main>
                     <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="http://twitter.com/share?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fspring-foundation-routine%2F"><i class="fa fa-twitter"></i></a>
+                                <a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fspring-foundation-routine%2F&media=http%3A%2F%2Fkandjdiaries.com%2Fwp-content%2Fuploads%2F2016%2F03%2FDSC_0165-683x1024.jpg"><i class="fa fa-pinterest"></i></a>
+                                <a href="http://facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkandjdiaries.com%2F2016%2F03%2Fspring-foundation-routine%2F"><i class="fa fa-facebook-square"></i></a>
+                            </div>
+                            <div class="col-xs-2 col-xs-offset-3">
+                                <span class="comments"><a href="">0</a>&nbsp;Comments</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="relatedBox">
+                                <div class="relatedHeader">
+                                    <h1 class="relatedHeader">Related</h1>
+                                </div>
+                                <div class="relatedMain">
+                                    <a href="http://kandjdiaries.com/2015/02/valentines-day-makeup-tutorial/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/02/lashes2-120x120.jpg" alt="Lashes 1" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/04/pretty-pink-spring-makeup/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/03/spring-makeup-120x120.jpg" alt="Spring makeup" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/04/get-firm-skin-and-get-rid-of-cellulite-with-this-one-step/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/04/legs-post-120x120.jpg" alt="Legs Post" class="relatedThumbnail"></a>
+                                    <a href="http://kandjdiaries.com/2015/12/my-i-cant-live-without-hair-products/"><img src="http://kandjdiaries.com/wp-content/uploads/2015/12/hair-care2-120x120.jpg" alt="Hair Care 2" class="relatedThumbnail"></a>
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </article>
-                <article>
-                    <header>
-                        <h2>Feb 08, 2016</h2>
-                        <h1><a>Make Up For Ever Primers Review</a></h1>
-                        <h3><a>Beauty</a></h3>
-                    </header>
-                    <main>
-                        <img src="http://kandjdiaries.com/wp-content/uploads/2016/02/primer3.jpg" alt="Primer 3" class="blogImage img-responsive">
-                        <p class="blogPost">The benefits or using a primer before your foundation are too many to list, but here are two main reasons why you should think about using them if you haven’t already: You makeup goes on a lot smoother when you have a nice smooth canvas underneath and your foundation will stay put all day (or […]</p>
-                        <button class="readMore">Read More</button>
-                    </main>
-                    <footer>
-                        <div class="row"></div>
-                        <div class="row"></div>
-                    </footer>
-                </article>
+                <div class="rov">
+                    <a href="http://kandjdiaries.com/page/2/">Next</a>
+                </div>
             </main>
-            <aside class="col-sm-4">
-                <div class="row"></div>
-                <div class="row"></div>
-                <div class="row"></div>
-                <div class="row"></div>
-                <div class="row"></div>
-            </aside>
+            <aside class="content col-sm-4 col-md-offset-1">
+                <div class="row">
+                    <div class="sidebarBox">
+                        <div class="sidebarHeader">
+                            <h1 id="follow" class="sidebarHeader">Follow</h1>
+                        </div>
+                        <div class="sidebarMain">
+                            <img class="socialLinks" src="http://kandjdiaries.com/wp-content/uploads/1411154490_facebook.png" alt="Facebook">
+                            <img class="socialLinks" src="http://kandjdiaries.com/wp-content/uploads/1411154507_twitter.png" alt="Twitter">
+                            <img class="socialLinks" src="http://kandjdiaries.com/wp-content/uploads/1411154553_instagram.png" alt="Instagram">
+                            <img class="socialLinks" src="http://kandjdiaries.com/wp-content/uploads/1411154584_pinterest.png" alt="Pinterest">
+                            <img class="socialLinks" src="http://kandjdiaries.com/wp-content/uploads/1411157045_lovin.png" alt="BlogLovin">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sidebarBox">
+                        <div class="sidebarHeader">
+                            <h1 id="subscribe" class="sidebarHeader">Subscribe</h1>
+                        </div>
+                        <div class="sidebarMain">
+                            <div class="subscribe sidebar">
+                                <input class="subscribe sidebar" type="email" placeholder="Be the first to know...">
+                                <i class="fa fa-envelope sidebar" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sidebarBox">
+                        <div class="sidebarHeader">
+                            <h1 id="wishlist" class="sidebarHeader">Wishlist</h1>
+                        </div>
+                        <div class="sidebarMain">
+                            <div id="wishlistCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#wishlistCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="1"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="2"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="3"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="4"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="5"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="6"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="7"></li>
+                                    <li data-target="#wishlistCarousel" data-slide-to="8"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <a href="http://rstyle.me/iC-n/uwnehqccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_19542151" class="wishlist img-responsive">
+                                        </a>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/uwnezqccw_"><img src="http://images.rewardstyle.com/img?v=2.13&p=n_19542167" class="wishlist img-responsive"></a>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/uwngrqccw_"><img src="http://images.rewardstyle.com/img?v=2.13&p=n_19542223" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/unxazqccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_19289111" alt="Copper Mug" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/pnjh5qccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_14034171" alt="Hera by Gucci" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/nk4wzqccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_12937879" alt="Leopard Print Heel" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/uwni5qccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_19542299" alt="Green Handbag" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/pbx5rqccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_13686639" alt="Black Pearl Earrings" class="wishlist img-responsive"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="http://rstyle.me/iC-n/mjzuhqccw_">
+                                            <img src="http://images.rewardstyle.com/img?v=2.13&p=n_11853383" alt="YSL Baby Doll" class="wishlist img-responsive"></a>
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#wishlistCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#wishlistCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sidebarBox">
+                        <div class="sidebarHeader">
+                            <h1 id="favorites" class="sidebarHeader">Favorites</h1>
+                        </div>
+                        <div class="sidebarMain">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/nordstrom-logo.jpeg" alt="Nordstrom Logo" class="favoritesLogo">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/gap-logo.jpg" alt="Gap Logo" class="favoritesLogo">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/kate-spade-logo.png" alt="Kate Spade Logo" class="favoritesLogo">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/j.crew-logo.jpg" alt="J Crew Logo" class="favoritesLogo">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/asos-logo.jpg" alt="Asos Logo" class="favoritesLogo">
+                            <img src="http://kandjdiaries.com/wp-content/uploads/2014/09/sephora-logo.jpg" alt="Sephora Logo" class="favoritesLogo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="archives">
+                        <select name="archives" id="archives">
+                            <option value="Archives" class="archiveList">Archives</option>
+                            <option value="May 2016" class="archiveList">May 2016</option>
+                            <option value="April 2016" class="archiveList">April 2016</option>
+                            <option value="March 2016" class="archiveList">March 2016</option>
+                            <option value="February 2016" class="archiveList">February 2016</option>
+                            <option value="January 2016" class="archiveList">January 2016</option>
+                            <option value="December 2015" class="archiveList">December 2015</option>
+                            <option value="November 2015" class="archiveList">November 2015</option>
+                            <option value="August 2015" class="archiveList">August 2015</option>
+                            <option value="July 2015" class="archiveList">July 2015</option>
+                            <option value="June 2015" class="archiveList">June 2015</option>
+                            <option value="May 2015" class="archiveList">May 2015</option>
+                            <option value="April 2015" class="archiveList">April 2015</option>
+                            <option value="March 2015" class="archiveList">March 2015</option>
+                            <option value="February 2015" class="archiveList">February 2015</option>
+                            <option value="January 2015" class="archiveList">January 2015</option>
+                            <option value="December 2014" class="archiveList">December 2014</option>
+                            <option value="November 2014" class="archiveList">November 2014</option>
+                            <option value="October 2014" class="archiveList">October 2014</option>
+                            <option value="September 2014" class="archiveList">September 2014</option>
+                            <option value="August 2014" class="archiveList">August 2014</option>
+                            <option value="July 2014" class="archiveList">July 2014</option>
+                            <option value="June 2014" class="archiveList">June 2014</option>
+                            <option value="May 2014" class="archiveList">May 2014</option>
+                            <option value="April 2014" class="archiveList">April 2014</option>
+                            <option value="March 2014" class="archiveList">March 2014</option>
+                            <option value="February 2014" class="archiveList">February 2014</option>
+                            <option value="January 2014" class="archiveList">January 2014</option>
+                            <option value="December 2013" class="archiveList">December 2013</option>
+                            <option value="November 2013" class="archiveList">November 2013</option>
+                            <option value="October 2013" class="archiveList">October 2013</option>
+                            <option value="September 2013" class="archiveList">September 2013</option>
+                            <option value="August 2013" class="archiveList">August 2013</option>
+                            <option value="July 2013" class="archiveList">July 2013</option>
+                            <option value="June 2013" class="archiveList">June 2013</option>
+                            <option value="May 2013" class="archiveList">May 2013</option>
+                            <option value="April 2013" class="archiveList">April 2013</option>
+                            <option value="March 2013" class="archiveList">March 2013</option>
+                            <option value="February 2013" class="archiveList">February 2013</option>
+                            <option value="January 2013" class="archiveList">January 2013</option>
+                            <option value="December 2012" class="archiveList">December 2012</option>
+                            <option value="November 2012" class="archiveList">November 2012</option>
+                            <option value="October 2012" class="archiveList">October 2012</option>
+                            <option value="September 2012" class="archiveList">September 2012</option>
+                            <option value="August 2012" class="archiveList">August 2012</option>
+                            <option value="July 2012" class="archiveList">July 2012</option>
+
+                        </select>
+                        <img src="http://kandjdiaries.com/wp-content/themes/k_and_j/img/down-arrow.png" class="down">
+                    </div>
+                </div>
+        </div>
+        <div class="row insta">
+            <header class="insta">
+                <h2 id="insta">K&amp;J Instagram</h2>
+            </header>
+            <main class="row insta">
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFnKbv4K6Ip/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13269439_1084276288304570_197883317_n.jpg?ig_cache_key=MTI1NDAxNjkwODU0NTIwNDc3Nw%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFl67A1K6M_/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13259053_488682411340578_1317199654_n.jpg?ig_cache_key=MTI1MzY2NzIxMzMzMTM3NDkxMQ%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFkngKJq6Lb/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13166860_1000492513360047_861519402_n.jpg?ig_cache_key=MTI1MzMwMDMzMDA1MjY5MDY1MQ%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFdMCtIK6Iu/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13166777_601116850063650_170328779_n.jpg?ig_cache_key=MTI1MTIwOTIzMzkzMTQxMjAxNA%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFZtUxtK6Dj/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13183458_500031536853580_1907277632_n.jpg?ig_cache_key=MTI1MDIyOTcxMTQyNTc0MTAyNw%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFUXXMnK6Dd/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13113949_1286551488026084_806600098_n.jpg?ig_cache_key=MTI0ODcyNTc0NTg0ODI2Mjg3Nw%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFQRRboK6Jw/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13129278_777841285686336_453636225_n.jpg?ig_cache_key=MTI0NzU3MzA2MTQ2ODM5ODE5Mg%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFPbZToK6BP/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13151309_512996398885654_1364992333_n.jpg?ig_cache_key=MTI0NzMzNjEwODEyMjY3NzMyNw%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFMDmPZq6BR/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13099082_1587156294909838_1659129747_n.jpg?ig_cache_key=MTI0NjM4NzAxODg5MTIzOTUwNQ%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFLAQfoq6J1/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13092224_239230059776028_2079348785_n.jpg?ig_cache_key=MTI0NjA5MDg1NTM3ODAzNTMxNw%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFKE8J-K6Jt/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13167284_788740841270584_248361275_n.jpg?ig_cache_key=MTI0NTgyOTk3Mjk4MjczNTQ2OQ%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFEscZfK6OK/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13150756_490089051184567_512231213_n.jpg?ig_cache_key=MTI0NDMxNDg2MjYxOTQzNTkxNA%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFC8PXeq6Md/" style="background-image: url('https://scontent.cdninstagram.com/l/t51.2885-15/e35/p320x320/13151275_1703857539880153_1155637240_n.jpg?ig_cache_key=MTI0MzgyMTM4NTkwMTEyMjMzMw%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFBx62XK6BJ/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13151184_853646134768566_1277864252_n.jpg?ig_cache_key=MTI0MzQ5NDUyMDUxMDQ1NTg4MQ%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BFAtwkyK6Ia/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13188183_1006880912698891_538780223_n.jpg?ig_cache_key=MTI0MzE5NDc0NzI3ODU2NTkxNA%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BE9JdxCK6Ha/" style="background-image: url(https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13126623_1600102676984333_88886196_n.jpg?ig_cache_key=MTI0MjE5MDcwMDE1NzMxMzQ5OA%253D%253D.2);" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BE8ofKOK6G2/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13092348_221527261562595_1759964200_n.jpg?ig_cache_key=MTI0MjA0NTY2MDM4Njc5NTk1OA%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BE6ntrqK6C-/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13150871_1580005615663367_1848675665_n.jpg?ig_cache_key=MTI0MTQ3OTMxMDM2Mjc3OTgzOA%3D%3D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BE45T6Tq6O3/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/12446304_531649197015535_499394984_n.jpg?ig_cache_key=MTI0MDk5Mzc1NDI2ODgwNDAyMw%253D%253D.2');" class="instaFeed"></a>
+                </div>
+                <div class="instaContainer">
+                    <a href="https://www.instagram.com/p/BE2PwmZK6Ds/" style="background-image: url('https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/13126909_1105873962796035_988150377_n.jpg?ig_cache_key=MTI0MDI0ODA1Nzg0NDE3OTE4MA%253D%253D.2');" class="instaFeed"></a>
+                </div>
+            </main>
         </div>
         <div class="row">
-            <h2 id="insta"></h2>
-        </div>
-        <div class="row">
-            <img src="" alt="">
+            <footer class="pageFooter">
+                <p class="col-xs-6 pageFooter text-left">Designed and Developed by <a href="http://verisage.us/en/blog-design/">Verisage</a></p>
+                <p class="col-xs-6 pageFooter text-right">&copy; K &amp; J Diaries 2016. All Rights Reserved</p>
+            </footer>
         </div>
     </div>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
+    </div>
 </body>
 
 </html>
