@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular Setup</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body ng-app="playerApp" ng-controller="playerCtrl">
-    <div ng-repeat="kill in player.kills">
-        <h1>{{kill.handle}}</h1>
-        <h3>{{kill.rank}}</h3>
-        <div ng-repeat="clan in kill.clan">
-            <p>{{clan}}</p>
+    <div class="container">
+       <h1 class="title">The Fallen</h1>
+        <div ng-repeat="kill in player.kills">
+            <h2>Name: {{kill.handle}}</h2>
+            <h3>Rank: {{kill.rank}}</h3>
+                <ul>Clan:</ul>
+                    <li ng-repeat="clan in kill.clan">{{clan}}</li>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>

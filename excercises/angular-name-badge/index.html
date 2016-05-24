@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Badge Name</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="badgeApp">
+    <div class="container" ng-controller="mainCtrl">
+        <div class="row">
+            <form name="badgeForm" novalidate>
+                <div class="row">
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.fistName.$invalid && !badgeForm.firstName.$pristine }">
+                        <input class="form-control" name="firstName" type="text" placeholder="First Name" ng-model="person.firstName" ng-minlength="3" required>
+                         <p ng-show="badgeForm.firstName.$error.minlength" class="help-block">First name is too short. Must be at least 3 characters.</p>
+                    </div>
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.lastName.$invalid && !badgeForm.lastName.$pristine }">
+                        <input class="form-control" name="lastName" type="text" placeholder="Last Name" ng-model="person.lastName" ng-minlength="3" required>
+                         <p ng-show="badgeForm.lastName.$error.minlength" class="help-block">Last name is too short. Must be at least 3 characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.email.$invalid && !badgeForm.email.$pristine }">
+                        <input class="form-control" name="email" type="email" placeholder="Email" ng-model="person.email" ng-minlength="3" required>
+                         <p ng-show="badgeForm.email.$error.minlength" class="help-block">Email is too short.</p>
+                         <p ng-show="badgeForm.email.$invalid && !badgeForm.email.$pristine" class="help-block">Enter a valid email address.</p>
+                    </div>
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.birthplace.$invalid && !badgeForm.birthplace.$pristine }">
+                        <input class="form-control" name="birthplace" type="text" placeholder="Place of Birth" ng-model="person.birthplace" ng-minlength="3" required>
+                         <p ng-show="badgeForm.birthplace.$error.minlength" class="help-block">Birthplace is too short. Must be at least 3 characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.phone.$invalid && !badgeForm.phone.$pristine }">
+                        <input class="form-control" name="phone" type='number' placeholder=" Phone" ng-model="person.phone" ng-minlength="10" ng-maxlength="10" required>
+                         <p ng-show="badgeForm.phone.$error.minlength" class="help-block">Phone number is too short. Please enter a valid 10-digit phone number.</p>
+                          <p ng-show="badgeForm.phone.$error.maxlength" class="help-block">Phone number is too long. Please enter a valid 10-digit phone number.</p>
+                    </div>
+                    <div class="col-xs-6 form-group" ng-class="{ 'has-error' : badgeForm.food.$invalid && !badgeForm.food.$pristine }">
+                        <input class="form-control" name="food" type="text" placeholder="Favorite Food" ng-model="person.favoriteFood" ng-minlength="3" required>
+                         <p ng-show="badgeForm.food.$error.minlength" class="help-block">Favorite food is too short. Must be at least 3 characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 form-group" ng-class="{ 'has-error' : badgeForm.about.$invalid && !badgeForm.about.$pristine }">
+                        <textarea class="form-control" name="about" id="" cols="30" rows="10" placeholder="Tell us about yourself" ng-minlength="3" ng-model="person.about" required></textarea>
+                         <p ng-show="badgeForm.about.$error.minlength" class="help-block">About me is too short. Must be at least 3 characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 col-xs-offset-5">
+                        <button class="btn btn-primary" ng-disabled="badgeForm.$invalid" ng-click="createBadge()">Submit</button>
+                        
+                    </div>
+                </div>
+            </form>
+
+
+            <article ng-repeat="person in badges">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <heading>
+                            <h1 class="panel-title">Badge:</h1>
+                        </heading>
+                    </div>
+                    <main class="panel-body">
+                        <div class="row">
+                            <section class="col-xs-6">
+                                <div class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="key">Name: </span>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <span>{{ person.firstName }} {{ person.lastName }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="col-xs-6">
+                                <div class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="key">Phone: </span>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <span>{{ person.phone }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col-xs-6">
+                                <div class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="key">Place of Birth: </span>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <span>{{ person.birthplace }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="col-xs-6">
+                                <div class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="key">Favorite Food: </span>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <span>{{ person.favoriteFood }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col-xs-6">
+                                <div class="well well-sm">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <span class="key">Email: </span>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <span>{{ person.email }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col-xs-8 col-xs-offset-2">
+                                <div class="well well-lg">{{ person.about }}</div>
+                            </section>
+                        </div>
+                    </main>
+                </div>
+            </article>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
