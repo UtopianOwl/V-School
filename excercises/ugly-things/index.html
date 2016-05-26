@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="postUglies">
+    <div class="containter" ng-controller="mainCtrl">
+        <header>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <form name=postForm onsubmit="event.preventDefault();" novalidate>
+                        <div class="row">
+                            <div class="col-xs-4 form-group">
+                                <input type="text" name="title" class="form-control" placeholder="Title" ng-model="object.title" required>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="col-xs-4 form-group">
+                                <input type="text" name="imgUrl" class="form-control" placeholder="Image URL" ng-model="object.imgUrl" required>
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="col-xs-4 form-group">
+                                <input type="text" name="desc" class="form-control" placeholder="Description" ng-model="object.desc">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary center-block" ng-click="createPost()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row main">
+                <article class="col-xs-4" ng-repeat="object in posts track by $index">
+                    <div class="thumbnail"><img ng-src="{{ object.imgUrl }}" alt="Post Image">
+                        <div class="caption">
+                            <h1>{{ object.title }}</h1>
+                            <p>{{ object.desc }}</p>
+                        </div>
+                        <!-- list group for comments here -->
+                        <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="item in object.comments track by $index">
+                                <span class="badge" ng-click="deleteComment($parent.$index, $index)">X</span> {{ item }}
+                            </li>
+                        </ul>
+                        <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" ng-click="saveIndex($index)" data-target="#myModal">Comment</button>
+                        <button class="btn btn-danger" ng-click="deletePost($index)">Delete</button>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <aside>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Add a Comment</h4>
+                        </div>
+                        <div class="modal-body">
+                            <textarea name="comment" id="comment" cols="30" rows="10" class="form-control center-block" ng-model="newComment" placeholder="Type your comment here..." required></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary center-block" ng-mousedown="addComment()" data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--
+
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <form onsubmit="event.preventDefault();">
+                        <textarea name="comment" id="comment" cols="30" rows="10" class="form-control center-block" ng-model="comment" placeholder="Type your comment here..." required></textarea>
+                        <button type="button" class="btn btn-primary center-block" ng-click="addComment()" data-dismiss="modal">Submit</button>
+                    </form>
+                </div>
+            </div>
+-->
+        </aside>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

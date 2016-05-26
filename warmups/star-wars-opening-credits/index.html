@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Opening Credits</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="SWOC" ng-controller="mainCtrl">
+    <div class="container">
+        <header ng-show="introducing">
+            <div class="row intro">
+                <section class="intro col-xs-6 col-xs-offset-3">
+                    <h3 class="intro">A long time ago, in a galaxy far,<br> far away....</h3>
+                </section>
+            </div>
+        </header>
+        <main ng-hide="introducing">
+            <div class="row title">
+                <section class="title">
+                    <img src="Star_Wars_Yellow_Logo.svg.png" alt="Star Wars Logo" class="center-block">
+                    <h2 class="subtitle">{{ starWars.title }}</h2>
+                </section>
+            </div>
+            <div class="row main">
+                <section class="main col-xs-10 col-xs-offset-1">
+                    <p class="main">{{ starWars.opening_crawl }}</p>
+                </section>
+            </div>
+        </main>
+        <footer ng-show="introducing">
+            <div class="row footer">
+                <div class="col-xs-6">
+                    <p class="producer">Producers: {{ starWars.producer }}</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="director">Director: {{ starWars.director }}</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

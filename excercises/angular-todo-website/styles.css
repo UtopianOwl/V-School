@@ -1,0 +1,14 @@
+div.row.main {
+    margin: 0;
+}
+h2 {
+    display: inline-block; 
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+form input {
+    margin: 20px;
+}

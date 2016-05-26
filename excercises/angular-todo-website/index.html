@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular To Do Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="toDoApp">
+    <div class="conainer" ng-controller="mainCtrl">
+        <header>
+            <div class="row header">
+                <div class="col-xs-4 col-xs-offset-4">
+                    <h1>To Do List</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="row form">
+                    <div class="col-xs-6 col-xs-offset-3">
+                        <form name="toDoForm" class="form-group" ng-class="{'has-warning' : editToggle}" novalidate>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="title" ng-model="item.title" placeholder="Title" required>
+                                </div>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="imgUrl" ng-model="item.imgUrl" placeholder="Image URL">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="price" ng-model="item.price" placeholder="Price">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="description" ng-model="item.description" placeholder="Description">
+                                </div>
+                                <div class="col-xs-2 col-xs-offset-5">
+                                    <button ng-click="addToDo()" type="submit" class="btn btn-success" ng-hide="editToggle">Submit</button>
+                                    <button ng-click="saveChanges()" class="btn btn-info center-block" ng-show="editToggle">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row main">
+                    <article ng-repeat="item in toDoArray track by $index">
+                        <div class="col-xs-4">
+                            <div class="row header">
+                                <input type="checkbox" name="complete" ng-click="changeStyle()" ng-model="complete">
+                                <h2 class="toDoTitle" ng-class="{'complete' : complete}">{{ item.title }}</h2>
+                            </div>
+
+                            <div class="row main">
+                                <div class="col-xs-6">
+                                    <div class="image">
+                                        <img src="{{ item.imgUrl }}">
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <ul>
+                                        <li class="price">Price: <span class="price">{{ item.price }}</span></li>
+                                        <li class="description">Description: <span class="description">{{ item.description }}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="buttons row">
+                                <div class="col-xs-2 col-xs-offset-4">
+                                    <button class="glyphicon glyphicon-pencil btn btn-sm btn-warning center-block" ng-disabled="editToggle" ng-click="editToDo($index)"></button>
+                                </div>
+                                <div class="col-xs-2">
+                                    <button class="glyphicon glyphicon-trash btn btn-sm btn-danger center-block" ng-disabled="editToggle" ng-click="deleteToDo($index)"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

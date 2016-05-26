@@ -1,0 +1,48 @@
+div.container {
+    width: 100%;
+}
+header, div.header {
+    height: 108px;
+    width: 100%;
+    background-color: black;
+}
+img.don {
+    height: 108px;
+    display: inline-block;
+}
+h1 {
+    text-align: center;
+    display: inline-block;
+    margin-left: 108px;
+    color: crimson;
+}
+
+div.thumbnail {
+    height: 485.4px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 20px;
+    border: 3px solid crimson;
+}
+div.caption {
+    position: relative;
+    left: -4px;
+    top: 412px;
+    height: 64px;
+    width: 294px;
+    background-color: rgba(0, 0, 0, .7);
+}
+h3 {
+    text-align: center;
+    color: white;
+    opacity: 1
+}
+main, body {
+    background-color: dimgrey
+}
+main {
+    width: 70%;
+    margin: auto;
+}

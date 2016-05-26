@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="colorSurvey" ng-controller="mainCtrl">
+   <header>
+       <h1>Buddy's Color Survey</h1>
+   </header>
+   <main>
+       <section>
+           <form action="" class="form-group" novalidate="">
+              <fieldset>
+              <legend>Choose your Favorite Color:</legend>
+               <input type="radio" name="color" class="options" ng-model="color.choice" value="red">Red<br>
+               <input type="radio" name="color" class="options" ng-model="color.choice" value="green">Green<br>
+               <input type="radio" name="color" class="options" ng-model="color.choice" value="blue">Blue<br>
+               <input type="radio" name="color" class="options" ng-model="color.choice" value="pink">Hot Pink<br>
+               <input type="radio" name="color" class="options" ng-model="color.choice" value="other">Other
+               </fieldset>
+               <button type="submit" class="btn btn-success" ng-click="select()">Select</button>
+           </form>
+       </section>
+       <section>
+           <figure>
+               <!-- graph goes here -->
+           </figure>
+       </section>
+   </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

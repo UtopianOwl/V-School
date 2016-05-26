@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yoda Speak</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="yodaSpeak" ng-controller="mainCtrl">
+    <form class="form-group" novalidate="">
+        <input type="text" name="plainText" ng-model="plainText" placeholder="Your text here..." class="form-control">
+        <button class="btn btn-success" ng-click="translate()" type="submit">Translate</button>
+    </form>
+    <p>{{ translation }}</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

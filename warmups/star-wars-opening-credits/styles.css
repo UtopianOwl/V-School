@@ -1,0 +1,38 @@
+body {
+    color: yellow;
+    background-color: black;
+}
+
+img {
+    width: 400px;
+    margin-top: 1000px;
+    margin-bottom: 72px;
+}
+
+h2.subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 144px;
+}
+
+h3.intro {
+    font-size: 42px;
+    color: dodgerblue;
+}
+
+p.main {
+    text-align: justify;
+    font-size: 42px;
+    padding: 0px 20px;
+    margin-bottom: 1000px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+footer, div.footer {
+    width: 100%;
+}
