@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="clickerApp" ng-controller="mainCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 col-xs-offset-3">
+                <p class="red counter text-center">{{ redCount }}</p>
+                <button class="btn btn-danger glyphicon glyphicon-king center-block" ng-click="redClick()"></button>
+            </div>
+            <div class="col-xs-3">
+                <p class="blue counter text-center">{{ blueCount }}</p>
+                <button class="btn btn-info glyphicon glyphicon-queen center-block" ng-click="blueClick()"></button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

@@ -1,11 +1,13 @@
 var app = angular.module('hitList', [])
-app.controller('mainCtrl', ['$scope', '$http', function ($scope, $http) {
- console.log("hello");   
-    $http.get('http://mean.codingcamp.us:6543/hitlist.json')
+
+app.service('httpService', ['$http', function ($http) {
+    this.get = function () {
+        return $http.get('http://mean.codingcamp.us:6543/hitlist.json')
+    }
+}]);
+app.controller('mainCtrl', ['$scope', '$http', 'httpService', function ($scope, $http, httpService) {
+    httpService.get()
         .then(function (response) {
-            console.log(response.data);
-            console.log('hello');
             $scope.hitList = response.data;
         });
-    console.log($scope.hitList);
 }]);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Routing Basics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body ng-app="RoutingApp">
+    <div class="controller" ng-controller="mainCtrl">
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" ng-class="{ 'active' : isActive('/') }"><a href="#/">Home</a></li>
+            <li role="presentation" ng-class="{ 'active' : isActive('/about') }"><a href="#/about">About</a></li>
+            <li role="presentation" ng-class="{ 'active' : isActive('/whyILove') }"><a href="#/whyILove">Why I Love</a></li>
+        </ul>
+    </div>
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="about/about.js"></script>
+    <script type="text/javascript" src="why-i-love/whyILove.js"></script>
+</body>
+
+</html>

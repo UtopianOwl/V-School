@@ -1,0 +1,29 @@
+img {
+    width: 100%;
+}
+
+div.form {
+    border: navy solid 3px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: cornflowerblue;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+div.entry {
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+input {
+    margin-bottom: 15px;
+}
+h3 {
+    text-align: center;
+    color: white;
+}
+div.thumbnail {
+    border: navy solid 3px;
+    border-radius: 20px;
+    background-color: cornflowerblue;
+}

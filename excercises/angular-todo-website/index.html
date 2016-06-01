@@ -10,77 +10,70 @@
 
 <body ng-app="toDoApp">
     <div class="conainer" ng-controller="mainCtrl">
-        <header>
-            <div class="row header">
-                <div class="col-xs-4 col-xs-offset-4">
-                    <h1>To Do List</h1>
+        <div class="divider">
+            <header>
+                <div class="row header">
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <h1>To Do List</h1>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <main>
+            </header>
             <section>
                 <div class="row form">
-                    <div class="col-xs-6 col-xs-offset-3">
+                    <div class="col-xs-8 col-xs-offset-2">
                         <form name="toDoForm" class="form-group" ng-class="{'has-warning' : editToggle}" novalidate>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="title" ng-model="item.title" placeholder="Title" required>
-                                </div>
-                                <div class="col-xs-6">
-                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="imgUrl" ng-model="item.imgUrl" placeholder="Image URL">
-                                </div>
-                                <div class="col-xs-6">
-                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="price" ng-model="item.price" placeholder="Price">
-                                </div>
-                                <div class="col-xs-6">
-                                    <input type="text" class="form-control" ng-class="{'form-control-warning' : editToggle}" name="description" ng-model="item.description" placeholder="Description">
-                                </div>
-                                <div class="col-xs-2 col-xs-offset-5">
-                                    <button ng-click="addToDo()" type="submit" class="btn btn-success" ng-hide="editToggle">Submit</button>
-                                    <button ng-click="saveChanges()" class="btn btn-info center-block" ng-show="editToggle">Save</button>
-                                </div>
-                            </div>
+                            <input type="text" class="form-control center-block" ng-class="{'form-control-warning' : editToggle}" name="title" ng-model="item.title" placeholder="Title" required>
+                            <input type="text" class="form-control center-block" ng-class="{'form-control-warning' : editToggle}" name="imgUrl" ng-model="item.imgUrl" placeholder="Image URL">
+                            <input type="text" class="form-control center-block" ng-class="{'form-control-warning' : editToggle}" name="price" ng-model="item.price" placeholder="Price">
+                            <input type="text" class="form-control center-block" ng-class="{'form-control-warning' : editToggle}" name="description" ng-model="item.description" placeholder="Description">
+                            <button ng-click="addToDo()" type="submit" class="btn btn-success glyphicon glyphicon-plus center-block" ng-hide="editToggle" ng-disabled="toDoForm.$invalid"></button>
+                            <button ng-click="saveChanges()" class="btn btn-info glyphicon glyphicon-floppy-disk center-block" ng-show="editToggle"></button>
                         </form>
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="row main">
-                    <article ng-repeat="item in toDoArray track by $index">
-                        <div class="col-xs-4">
-                            <div class="row header">
-                                <input type="checkbox" name="complete" ng-click="changeStyle()" ng-model="complete">
-                                <h2 class="toDoTitle" ng-class="{'complete' : complete}">{{ item.title }}</h2>
+        </div>
+        <section>
+            <div class="row main" ng-repeat="item in toDoArray track by $index">
+                <article>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="panel" ng-class="panels[$index % panels.length]">
+                            <div class="panel-heading">
+                                <div class="row main header">
+                                    <input type="checkbox" name="complete" ng-click="changeStyle()" ng-model="complete">
+                                    <h2 class="toDoTitle panel-title" ng-class="{'complete' : complete}">{{ item.title }}</h2>
+                                </div>
                             </div>
-
-                            <div class="row main">
-                                <div class="col-xs-6">
-                                    <div class="image">
-                                        <img src="{{ item.imgUrl }}">
+                            <div class="panel-body">
+                                <div class="row main content">
+                                    <div class="col-xs-1">
+                                        <div class="image" ng-show="item.imgUrl">
+                                            <img src="{{ item.imgUrl }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10 col-xs-offset-1">
+                                        <ul>
+                                            <li class="price"><span class="price" ng-show="item.price">Price: </span>{{ item.price }}</li>
+                                            <li class="description"><span class="description" ng-show="item.description">Description: </span>{{ item.description }}</li>
+                                        </ul>
                                     </div>
                                 </div>
-
-                                <div class="col-xs-6">
-                                    <ul>
-                                        <li class="price">Price: <span class="price">{{ item.price }}</span></li>
-                                        <li class="description">Description: <span class="description">{{ item.description }}</span></li>
-                                    </ul>
-                                </div>
                             </div>
-                            <div class="buttons row">
-                                <div class="col-xs-2 col-xs-offset-4">
-                                    <button class="glyphicon glyphicon-pencil btn btn-sm btn-warning center-block" ng-disabled="editToggle" ng-click="editToDo($index)"></button>
-                                </div>
-                                <div class="col-xs-2">
-                                    <button class="glyphicon glyphicon-trash btn btn-sm btn-danger center-block" ng-disabled="editToggle" ng-click="deleteToDo($index)"></button>
+                            <div class="panel-footer">
+                                <div class="row main buttons">
+                                    <div class="col-xs-1">
+                                        <button class="glyphicon glyphicon-pencil btn btn-xs btn-warning center-block" ng-disabled="editToggle" ng-click="editToDo($index)"></button>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <button class="glyphicon glyphicon-trash btn btn-xs btn-danger center-block" ng-disabled="editToggle" ng-click="deleteToDo($index)"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </section>
-
-        </main>
+                    </div>
+                </article>
+            </div>
+        </section>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>

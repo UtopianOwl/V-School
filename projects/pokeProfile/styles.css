@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Andy Bold';
+    src: url(AndyBold.ttf);
+}
+
+body {
+    background: url(pikachu.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Andy Bold';
+}
+
+h2 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 
+        3px 3px 0 #3564AE,
+        -1px -1px 0 #3564AE, 
+        1px -1px 0 #3564AE, 
+        -1px 1px 0 #3564AE, 
+        1px 1px 0 #3564AE;
+}
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    color: #3564AE;
+    text-shadow: 
+        3px 3px 0 white,
+        -1px -1px 0 white, 
+        1px -1px 0 white, 
+        -1px 1px 0 white, 
+        1px 1px 0 white;
+}
+p {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #3564AE, 
+        1px -1px 0 #3564AE, 
+        -1px 1px 0 #3564AE, 
+        1px 1px 0 #3564AE;
+}
+div.imageBox {
+    height: 120px;
+    width:120px;
+    background-color: white;
+    border: 2px solid #3564AE;
+    box-shadow: 3px 3px 0 #234372;
+}

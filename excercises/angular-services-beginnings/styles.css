@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Andy;
+    src: url("_font/AndyBold.ttf")
+}
+
+img {
+    width: 50%;
+    min-width: 400px;
+}
+
+h2.title {
+    /*    color: #306CB4;*/
+    color: white;
+    font-family: 'Andy', cursive;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    min-width: 100px;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+div.pokeBall {
+    position: relative;
+    width: 50%;
+    min-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    min-width: 100px;
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+button.btn-success {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: langdon;
+    src: url(Langdon.otf);
+}
+body {
+    background-color: #1F2C5C;
+    color: #E6A300;
+}
+h1 {
+    font-family: 'langdon';
+    font-size: 64px;
+}
+div.image.home {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.home {
+    width: 100%;
+}
+article.about {
+    padding: 20px;
+}
+article p {
+    text-align: justify;
+    padding: 20px;
+}
+
+div.image.love {
+    width: 330px;
+    height: 330px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+div#boston {
+    background: url(why-i-love/boston.jpg) no-repeat center center; 
+    background-size: cover;
+}
+div#harvard {
+    background: url(why-i-love/harvard.jpg) no-repeat center center; 
+    background-size: cover;
+}
+div#fenway {
+    background: url(why-i-love/fenway.jpg) no-repeat center center; 
+    background-size: cover;
+}
+div#plymouth {
+    background: url(why-i-love/plymouth.jpg) no-repeat center center; 
+    background-size: cover;
+}
+div#padanaram {
+    background: url(why-i-love/padanaram.jpg) no-repeat center center; 
+    background-size: cover;
+}

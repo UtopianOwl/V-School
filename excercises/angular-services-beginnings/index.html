@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Services Beginnings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="pokeApp" ng-controller="pokeCtrl">
+    <img src="_img/pokemonLogo.jpg" class="img-responsive center-block" alt="Pokemon Logo">
+    <div class="pokeBall">
+        <h2 class="title">Enter Your Favorite Pokemon:</h2>
+        <button class="btn btn-success glyphicon glyphicon-floppy-disk" ng-click="add()" ng-disabled="pokeForm.$valid"></button>
+        <form name="pokeForm" nonvalidate>
+            <div class="form-group">
+                <input class="form-control" name="pokemon" type="text" ng-model="name" required>
+                <!--            <button class="btn btn-danger glyphicon glyphicon-trash" ng-click="remove()"></button>-->
+            </div>
+        </form>
+        <img src="_img/PokeBall.png" alt="PokeBall" class="img-responsive center-block">
+    </div>
+    <ul>
+        <li ng-repeat="name in pokeList track by $index">{{ name }}</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

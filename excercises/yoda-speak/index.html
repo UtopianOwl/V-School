@@ -13,7 +13,9 @@
         <input type="text" name="plainText" ng-model="plainText" placeholder="Your text here..." class="form-control">
         <button class="btn btn-success" ng-click="translate()" type="submit">Translate</button>
     </form>
-    <p>{{ translation }}</p>
+    <div class="blurb">
+        <p>{{ translation }}</p>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </body>

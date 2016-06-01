@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Setup Refresher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div class="container" style="width : 100%;" ng-app="myApp">
+        <div class="row" ng-controller="sumCtrl">
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <form class="form-group" name="sumForm" novalidate>
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-1">
+                            <input class="form-control" type="number" name="sumX" ng-model="sum.x">
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="glyphicon glyphicon-plus center-block"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="number" name="sumY" ng-model="sum.y">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-5">
+                            <button class="center-block" ng-click="add()">=</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-4 col-offset-4">
+                        <h2 class="center-block">{{ sum.sum }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-controller="productCtrl">
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <form class="form-group" name="productForm" novalidate>
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-1">
+                            <input class="form-control" type="number" name="productX" ng-model="product.x">
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="glyphicon glyphicon-remove center-block"></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="number" name="productY" ng-model="product.y">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2 col-xs-offset-5">
+                            <button class="center-block" ng-click="multiply()">=</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-4 col-offset-4">
+                        <h2 class="center-block">{{ product.product }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="service.js"></script>
+</body>
+
+</html>
