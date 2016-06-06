@@ -1,0 +1,43 @@
+<main>
+   <div class="row">
+        <section class="playerCash">
+            <div class="well well-lg">
+                <h3 class="playerCash text-right">Player Cash: {{ userService.user.cash | currency : "$" : 0 }}</h3>
+            </div>
+        </section>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <article class="questionBox">
+                <div class="panel panel-default center-block">
+                    <div class="panel-heading" style="background-color:#585858;border-color:#585858;">
+                        <p class="panel-title alignleft">{{ userService.question.category }}</p>
+                        <p class="badge alignright">{{ userService.question.difficulty }}</p>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p class="question">{{ userService.question.question }}</p>
+                        <p class="airDate"> ({{ userService.question.airDate | date : 'longDate'}})</p>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-10">
+                                <p class="answer" ng-class=" userService.user.correct ? 'correct' : 'incorrect' "><span class="bold">Your Answer: </span>{{ userService.user.answer }}</p>
+                            </div>
+                            <div class="col-xs-2">
+                                <span class="answer correct glyphicon glyphicon-ok" ng-show="userService.user.correct"></span>
+                                <span class="answer incorrect glyphicon glyphicon-remove" ng-hide="userService.user.correct"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="answer" ng-hide="userService.user.correct"><span class="bold">Correct Answer: </span>{{ userService.question.answer }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary center-block" ng-click="start()">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+            </article>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transformers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="styles.css">-->
+</head>
+
+<body ng-app="AutobotApp" ng-controller="mainCtrl">
+    <nav>
+
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <header>
+                    <h1>Transformers</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                <form name="newBot" class="form-group" novalidate>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.name" required>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.imgUrl" required>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.username" required>
+                    <button class="btn btn-success newBot" type="submit" ng-click="add()"><span class="glyphicon glyphicon-floppy-open"></span></button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <article ng-repeat="item in botList track by $index">
+                    <div class="box box-main">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box box-header">
+                                    <h3 class="box">{{ item.name }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-body">
+                            <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <img alt="{{ item.name }}" class="box" ng-src="{{ item.imgUrl }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3 col-xs-offset-8">
+                                    <p class="box">{{ item.username }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-footer">
+                           <div class="row">
+                               <div class="col-xs-3 col-xs-offset">
+                                   <button class="btn btn-warning center-block" ng-click="edit()"><span class="glyphicon glyphicon-pencil"></span></button>
+                               </div>
+                               <div class="col-xs-3 col-xs-offset">
+                                   <button class="btn btn-danger center-block" ng-click="delete()"><span class="glyphicon glyphicon-remove"></span></button>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="modelService.js"></script>
+</body>
+
+</html>

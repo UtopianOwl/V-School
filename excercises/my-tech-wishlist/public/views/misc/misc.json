@@ -1,0 +1,31 @@
+[{
+        "name": "LG EF9500",
+        "imgUrl": "http://itresan.com/wp-content/uploads/2015/01/lg-ef9500-flat-4k-oled-2-300x200.jpg",
+        "price": 3399
+    },
+    {
+        "name": "HTC Vive",
+        "imgUrl": "http://cdn.mobilesyrup.com/wp-content/uploads/2016/01/HTC-Vive-Pre-3-300x200.jpg",
+        "price": 799
+    },
+    {
+        "name": "Sony MDR-1A",
+        "imgUrl": "http://reviewbez.com/wp-content/uploads/2015/09/Sony-MDR1A-300x200.jpg",
+        "price": 298
+    },
+    {
+        "name": "Aperion Audio Intimus 5B Harmony SD",
+        "imgUrl": "http://www.siliconindia.com:81/news/newsimages/special/A2F3lnMZ.jpeg",
+        "price": 1646
+    },
+    {
+        "name": "Tesla Model S 90D",
+        "imgUrl": "https://fau4u2.files.wordpress.com/2016/04/1461429522.jpg?w=497",
+        "price": 94500
+    },
+    {
+        "name": "Blu Homes Lotus",
+        "imgUrl": "http://cdnassets.hw.net/dims4/GG/b5ef36f/2147483647/resize/300x%3E/quality/90/?url=http%3A%2F%2Fcdnassets.hw.net%2F87%2F71%2Fea16f97f4283a4df6ee393ce2405%2Fbluhomes-copakebreezehouse-hero-tcm138-2075666.jpg",
+        "price": 725000
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Apple iMac 27",
+        "imgUrl": "http://o.aolcdn.com/dims5/amp:215abacd9621982e378c8c934e95173eb8e90381/t:300,200/q:80/?url=http%3A%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F4a77d29a7108e1737834b5654be1f4f5%2F202195671%2Fimac_5k.jpg",
+        "price": 4099
+        },
+    {
+        "name": "Maingear Force Z170",
+        "imgUrl": "http://cache.futurelooks.com/wordpress/wp-content/uploads/2015/08/MAINGEAR-Quantum-SHIFT-300x200.jpg",
+        "price": 7555
+        },
+    {
+        "name": "Samsung Galaxy S7 Edge",
+        "imgUrl": "https://images.curved.de/product_teaser_sm/products/samsung-galaxy-s7-658x370-2a097b4439b90d10-2_56ca03172f17b.jpg",
+        "price": 780
+        },
+    {
+        "name": "Silent Circle Blackphone 2",
+        "imgUrl": "http://android.trendolizer.com/assets_c/2015/09/1778718-thumb-300xauto-1544396.jpg",
+        "price": 799
+        },
+    {
+        "name": "Apple iPad Pro 12.9",
+        "imgUrl": "http://l1.yimg.com/bt/api/res/1.2/Gka9LrYId4_1ceGHVZMkOw--/YXBwaWQ9eW5ld3NfbGVnbztmaT1maWxsO2g9MjAwO3E9NzU7dz0zMDA-/http://globalfinance.zenfs.com/en_us/Finance/BUSINESSWIRE/cbcf6b09baf014d12a864122ec700522",
+        "price": 1229
+        },
+    {
+        "name": "Google Pixel Chromebook",
+        "imgUrl": "http://kelleydeals.com/wp-content/uploads/2016/05/google_chromebook_pixel_2015_3qtr_front-100572824-primary.idge-300x200.jpg",
+        "price": 1299
+        }
+    ]

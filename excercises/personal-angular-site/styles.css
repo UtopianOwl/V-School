@@ -1,0 +1,111 @@
+@font-face {
+    font-family: DinCond;
+    src: url(fonts/DINWeb-Cond.woff);
+}
+@font-face {
+    font-family: DinCondBold;
+    src: url(fonts/DINWeb-CondBold.woff);
+}
+@font-face {
+    font-family: Din;
+    src: url(fonts/DINWeb.woff);
+}
+@font-face {
+    font-family: Glegoo;
+    src: url(fonts/glegoo-regular-webfont.woff2);
+}
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+body {
+    color: #FFE6A9;
+    background: #272727 url(jLogo.jpg) no-repeat scroll top left;
+}
+div.container {
+    width: 100%;
+}
+div.blank {
+    display: inline-block;
+    height: 150px;
+    width: 168px;
+}
+h1.title {
+    font-family: 'DinCondBold', sans-serif;
+    font-size: 
+}
+h2.welcome {
+    font-family: 'DinCond', sans-serif;
+    font-size: 96px;
+    height: 150px;
+    display: inline-block;
+    margin: -32px 0 0 32px;
+    transform: translateY(-25%);
+}
+header.index {
+    display: none;
+}
+div.panel {
+    width: 350px;
+    background: url(jBackground.jpg) no-repeat scroll center center;
+    margin-bottom: 64px;
+}
+div.row.welcomeBox {
+    margin: 0;
+    width: 100%;
+    padding: 24px 24px 0px 24px;
+}
+div.panel-footer {
+    background-color: #797979;
+    border-color: #797979;
+    position: relative;
+    bottom: 0;
+}
+di.panel-header {
+    background-color: #585858;
+    border-color: #585858;
+}
+article.questionBox {
+    margin-top: 64px;
+}
+div.panel-heading p {
+    font-family: 'DinCond', sans-serif;
+    font-size: 28px;
+}
+div.panel-body p {
+    font-family: 'Din', sans-serif;
+    font-size: 24px;
+}
+div.panel footer p {
+    font-family: 'Din', sans-serif;
+    font-size: 24px;
+}
+.bold {
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+.incorrect {
+    color: firebrick;
+}
+p.airDate {
+    text-align: right;
+    font-style: italic;
+    font-size: 20px;
+}
+p.panel-title {
+    text-transform: capitalize;
+}
+div.panel-body p.welcome {
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 16px;
+}
+div.well {
+    margin-left: 168px;
+    margin-top: 22px;
+}

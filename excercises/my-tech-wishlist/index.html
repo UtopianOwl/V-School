@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Tech Wishlist</title>
+    <link rel="stylesheet" href="public/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="public/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="public/views/global/styles.css">
+</head>
+
+<body ng-app="MainApp" ng-controller="mainCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/">
+                    <img alt="Brand" src="public/images/logo.png" class="brand">
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li ng-class="{ 'active' : isActive('/platform') }"><a href="#/platform">Platform Tech</a></li>
+                <li ng-class="{ 'active' : isActive('/misc') }"><a href="#/misc">Misc. Tech</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ng-view></ng-view>
+    
+
+    <!-- Vendor -->
+    <script src="public/vendor/angular.js"></script>
+    <script src="public/vendor/angular-route.js"></script>
+
+    <!-- Custom -->
+    <script src="main.js"></script>
+    <script src="public/views/platform/platform.js"></script>
+    <script src="public/views/misc/misc.js"></script>
+    <script src="public/views/global/entry.js"></script>
+</body>
+
+</html>

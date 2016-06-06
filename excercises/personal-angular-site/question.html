@@ -1,0 +1,38 @@
+<main>
+   <div class="row">
+        <section class="playerCash">
+            <div class="well well-lg">
+                <h3 class="playerCash text-right">Player Cash: {{ userService.user.cash | currency : "$" : 0 }}</h3>
+            </div>
+        </section>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <article class="questionBox">
+                <div class="panel panel-default center-block">
+                    <div class="panel-heading">
+                        <p class="panel-title alignleft">{{ userService.question.category }}</p>
+                        <p class="badge alignright">{{ userService.question.difficulty }}</p>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="panel-body">
+                        <p class="question">{{ userService.question.question }}</p>
+                        <p class="airDate"> ({{ userService.question.airDate | date : 'longDate'}})</p>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <form class="form-group answer" name="answerForm" novalidate>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control answer" ng-model="userAnswer" name="answer" placeholder="Type your answer here..." required>
+                                </div>
+                                <div class="col-xs-2">
+                                    <button class="btn btn-success center-block" ng-disabled="answerForm.$invalid" ng-click="answer()"><span class="glyphicon glyphicon-ok"></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>

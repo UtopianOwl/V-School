@@ -1,0 +1,14 @@
+<div class="container" ng-app="MiscApp">
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="wish in wishlistArray">
+            <entry wish-entry="wish"></entry>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="well" ng-show="isActive('/platform') || isActive('/misc')">
+                <p class="total">Total: {{ getTotal() | currency : $ : 0 }}</p>
+            </div>
+        </div>
+    </div>
+</div>
