@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Original Bounty Hunter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="bountyApp">
+    <div class="container" ng-controller="mainCtrl">
+        <div class="row">
+            <div class="col-xs-6">
+                <header>
+                    <h1>Bounties List</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <form name="newBountyForm" id="newBountyForm" novalidate ng-show="addToggle">
+                            <input type="text" class="form-control" name="firstName" ng-model="newBounty.firstName" placeholder="First Name">
+                            <input type="text" class="form-control" name="lastName" ng-model="newBounty.lastName" placeholder="Last Name">
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <legend>Alive?</legend>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-2">
+                                        <input type="radio" class="form-control" name="living" ng-value="true" id="alive" ng-model="newBounty.living">
+                                        <label for="alive">Yes</label>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-1">
+                                        <input type="radio" class="form-control" name="living" ng-value="false" id="dead" ng-model="newBounty.living">
+                                        <label for="dead">No</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <input type="number" class="form-control" name="bounty" ng-model="newBounty.bounty" placeholder="Bounty">
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <legend>Allegiance: </legend>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-2">
+                                        <input type="radio" class="form-control" name="type" value="Jedi" ng-model="newBounty.type">
+                                        <label for="jedi">Jedi</label>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-1">
+                                        <input type="radio" class="form-control" name="type" value="Sith" ng-model="newBounty.type">
+                                        <label for="sith">Sith</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button class="center-block btn btn-success" type="submit" ng-click="add()"><span class="glyphicon glyphicon-plus"></span></button>
+                        </form>
+                        <button class="center-block btn btn-success" type="submit" ng-click="toggleAdd()" ng-hide="addToggle"><span class="glyphicon glyphicon-plus"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4" ng-repeat="bounty in bountyList track by $index">
+                        <div class="panel panel-default" ng-hide="bounty.toggle">
+                            <div class="panel-heading">
+                                <h2 text-center>{{ bounty.firstName }}<br>{{ bounty.lastName }}</h2>
+                            </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Bounty: {{ bounty.bounty | currency : "₹" : 2 }}</li>
+                                    <li>Allegiance: {{ bounty.type }}</li>
+                                    <li>Status: {{ bounty.living | status }}</li>
+                                </ul>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-xs-2 col-xs-offset-4">
+                                        <button class="btn btn-warning center-block" ng-click="toggleEdit($index)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button class="btn btn-danger center-block" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form name="editBountyForm" id="editBountyForm" ng-show="bounty.toggle" novalidate>
+                            <input type="text" class="form-control" name="firstName" ng-model="bounty.firstName" placeholder="First Name">
+                            <input type="text" class="form-control" name="lastName" ng-model="bounty.lastName" placeholder="Last Name">
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <legend>Alive?</legend>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-2">
+                                        <input type="radio" class="form-control" name="living" ng-value="true" id="alive" ng-model="bounty.living">
+                                        <label for="alive">Yes</label>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-1">
+                                        <input type="radio" class="form-control" name="living" ng-value="false" id="dead" ng-model="bounty.living">
+                                        <label for="dead">No</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <input type="number" class="form-control" name="bounty" ng-model="bounty.bounty" placeholder="Bounty">
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <legend>Allegiance: </legend>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-2">
+                                        <input type="radio" class="form-control" name="type" value="Jedi" ng-model="bounty.type">
+                                        <label for="jedi">Jedi</label>
+                                    </div>
+                                    <div class="col-xs-2 col-xs-offset-1">
+                                        <input type="radio" class="form-control" name="type" value="Sith" ng-model="bounty.type">
+                                        <label for="sith">Sith</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <button class="center-block btn btn-success" type="submit" ng-click="edit(bounty)"><span class="glyphicon glyphicon-plus"></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="modelService.js"></script>
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src=""></script>
+</body>
+
+</html>

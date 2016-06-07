@@ -1,23 +1,45 @@
-var app = angular.module('AutobotApp', []);
+var app = angular.module('AutobotApp', ['ngRoute']);
 
-app.controller('mainCtrl', ['$scope', 'modelService', function($scope, modelService) {
-    $scope.botList = [];
-    modelService.get().then(function(botList) {
-        $scope.botList = botList;
+app.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider
+        .when("/fave", {
+            templateUrl: "views/fave/fave.html",
+            controller: "faveCtrl"
+        })
+//        .when("/autobots", {
+//            templateUrl: "views/autobots/autobots.html",
+//            controller: "autoCtrl"
+//        })
+//        .when("/decepticons", {
+//            templateUrl: "views/decepticons/decepticons.html",
+//            controller: "decepCtrl"
+//        })
+//        .otherwise({
+//            templateUrl: "views/home/home.html",
+//            controller: "homeCtrl"
+//        })
+}]);
+app.controller('mainCtrl', ['$scope', 'modelService', function ($scope, modelService) {
+
+    $scope.autobotList = [];
+    $scope.decepticonList = [];
+
+    modelService.get().then(function (botList) {
+        var fullList = [];
+        fullList = botList;
+
+        function autoCallback(element, index, array) {
+            if (element.username === 'root_Autobot') {
+                $scope.autobotList.push(element);
+            }
+        }
+        function decepCallback(element, index, array) {
+            if (element.username === 'root_Decepticon') {
+                $scope.decepticonList.push(element);
+            }
+        }
+        fullList.forEach(autoCallback);
+        fullList.forEach(decepCallback);
     });
-    $scope.add = function() {
-        modelService.add($scope.newItem).then(function (item) {
-            $scope.botList.push(item);
-        });
-    }
-    $scope.edit = function(index) {
-        modelService.edit($scope.editItem, index).then(function (item) {
-            $scope.botList[index] = item;
-        });
-    }
-    $scope.delete = function(index) {
-        $scope.botList = modelService.delete($scope.botList[index]._id).then(function (response) {
-            $scope.botList.splice(index, 1);
-        });
-    }
+
 }]);

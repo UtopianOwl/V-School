@@ -3,9 +3,6 @@ var app = angular.module('AutobotApp');
 app.service('modelService', ['$http', function ($http) {
     var baseUrl = 'http://mean.codingcamp.us/drewnauman/pony';
 
-    function checkID(element, index, array) {
-        return element._id === id;
-    }
     this.get = function () {
         return $http.get(baseUrl).then(function (response) {
             return response.data;

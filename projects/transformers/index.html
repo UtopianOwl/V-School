@@ -6,74 +6,55 @@
     <title>Transformers</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
-<!--    <link rel="stylesheet" href="styles.css">-->
+    <!--    <link rel="stylesheet" href="styles.css">-->
 </head>
 
-<body ng-app="AutobotApp" ng-controller="mainCtrl">
-    <nav>
+<body ng-app="AutobotApp">
+    <nav class="navbar navbar-default" ng-controller="mainCtrl">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/home"><img style="width: 64px" src="images/logo.png" alt="Autobot Logo"></a>
+            </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autobots <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="item in autobotList track by $index"><a href="#/autobots">{{ item.name }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Decepticons <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="item in decepticonList track by $index"><a href="#/decepticons">{{ item.name }}</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#/fave">Favorites</a></li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <header>
-                    <h1>Transformers</h1>
-                </header>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-                <form name="newBot" class="form-group" novalidate>
-                    <input type="text" class="form-control newBot" name="" ng-model="newItem.name" required>
-                    <input type="text" class="form-control newBot" name="" ng-model="newItem.imgUrl" required>
-                    <input type="text" class="form-control newBot" name="" ng-model="newItem.username" required>
-                    <button class="btn btn-success newBot" type="submit" ng-click="add()"><span class="glyphicon glyphicon-floppy-open"></span></button>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <article ng-repeat="item in botList track by $index">
-                    <div class="box box-main">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="box box-header">
-                                    <h3 class="box">{{ item.name }}</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box box-body">
-                            <div class="row">
-                                <div class="col-xs-8 col-xs-offset-2">
-                                    <img alt="{{ item.name }}" class="box" ng-src="{{ item.imgUrl }}">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-3 col-xs-offset-8">
-                                    <p class="box">{{ item.username }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box box-footer">
-                           <div class="row">
-                               <div class="col-xs-3 col-xs-offset">
-                                   <button class="btn btn-warning center-block" ng-click="edit()"><span class="glyphicon glyphicon-pencil"></span></button>
-                               </div>
-                               <div class="col-xs-3 col-xs-offset">
-                                   <button class="btn btn-danger center-block" ng-click="delete()"><span class="glyphicon glyphicon-remove"></span></button>
-                               </div>
-                           </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div>
-
+    
+    <div ng-view></div>
+    
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="modelService.js"></script>
+    <script type="text/javascript" src="model/modelService.js"></script>
 </body>
 
 </html>

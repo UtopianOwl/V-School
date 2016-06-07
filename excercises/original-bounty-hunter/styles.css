@@ -1,0 +1,27 @@
+@font-face {
+    font-family: tie;
+    src: url(TIE-Wing.ttf);
+}
+body {
+    background: #000 url(helmet.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: "tie", cursive, sans-serif;
+    font-size: 96px;
+    color: white;
+        text-shadow:
+       3px 3px 0 #7F6B54,
+     -1px -1px 0 #7F6B54,  
+      1px -1px 0 #7F6B54,
+      -1px 1px 0 #7F6B54,
+       1px 1px 0 #7F6B54;
+}
+form {
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 20px;
+}
+input {
+    margin-top: 16px;
+}
