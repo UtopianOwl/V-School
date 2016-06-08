@@ -1,55 +1,51 @@
-<div class="container faveBody">
-    <div class="row">
-        <div class="col-xs-12">
-            <header class="faveTitle">
-                <h1 class="faveTitle">Transformers</h1>
-            </header>
+<div class="fave-body">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <header class="faveTitle">
+                    <h1 class="faveTitle">Favorites</h1>
+                </header>
+            </div>
         </div>
-    </div>
-    <div class="row newFaveBot">
-        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-            <form name="newFaveBot" class="form-group" novalidate>
-                <input type="text" class="form-control newBot" name="" ng-model="newItem.name" required>
-                <input type="text" class="form-control newBot" name="" ng-model="newItem.imgUrl" required>
-                <input type="text" class="form-control newBot" name="" ng-model="newItem.username" required>
-                <button class="btn btn-success newBot" type="submit" ng-click="add()"><span class="glyphicon glyphicon-floppy-open"></span></button>
-            </form>
+        <div class="row newFaveBot">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                <form name="newFaveBot" class="form-group" novalidate>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.name" placeholder="Name" required>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.imgUrl" placeholder="Image URL" required>
+                    <input type="text" class="form-control newBot" name="" ng-model="newItem.username" placeholder="UserName" required>
+                    <button class="btn btn-success newBot center-block" type="submit" ng-click="add()"><span class="glyphicon glyphicon-floppy-open"></span></button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <article ng-repeat="item in faveList track by $index">
-                <div ng-hide="{{ item.fave  }}">
-                    <div class="box box-main">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="box box-header">
-                                    <h3 class="box">{{ item.name }}</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box box-body">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                <article ng-repeat="item in faveList track by $index">
+                    <div ng-hide="{{ item.fave  }}">
+                        <div class="box box-main">
+                            <button class="btn btn-danger btn-xs remove" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></button>
                             <div class="row">
-                                <div class="col-xs-8 col-xs-offset-2">
-                                    <img alt="{{ item.name }}" class="box" ng-src="{{ item.imgUrl }}">
+                                <div class="col-xs-12">
+                                    <div class="box box-header">
+                                        <h3 class="box">{{ item.name }}</h3>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-3 col-xs-offset-8">
-                                    <p class="box">{{ item.username }}</p>
+                            <div class="box box-body">
+                                <div class="row">
+                                    <div class="col-xs-8 col-xs-offset-2">
+                                        <img alt="{{ item.name }}" class="box fave" ng-src="{{ item.imgUrl }}">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="box box-footer">
-                            <div class="row">cle
-                                <div class="col-xs-2 col-xs-offset-5">
-                                    <button class="btn btn-danger center-block" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                                <div class="row">
+                                    <div class="col-xs-3 col-xs-offset-8">
+                                        <p class="box">[{{ item.username }}]</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
     </div>
 </div>

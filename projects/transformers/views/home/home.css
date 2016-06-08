@@ -1,0 +1,46 @@
+/*  Styles for Home page */
+
+div.home {
+    position: fixed !important;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../../images/main-wallpaper.jpg) no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+h1.home-title {
+    font-family: "transformers", cursive, sans-serif;
+    font-size: 96px;
+    color: black;
+    text-shadow:
+       3px 3px 0 #444,
+     -1px -1px 0 #444,  
+      1px -1px 0 #444,
+      -1px 1px 0 #444,
+       1px 1px 0 #444;
+}
+div.home-textbox {
+    text-align: center;
+    background-color: rgba(255, 255, 255, .95);
+    padding: 2em;
+    width: 700px;
+    border-radius: 200px;
+    box-shadow: 0 0 100px 50px white;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 850px) {
+    h1.home-title {
+        font-size: 52px;
+    }
+    div.home-textbox {
+        width: 400px;
+}

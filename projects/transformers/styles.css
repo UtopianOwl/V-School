@@ -1,0 +1,33 @@
+@font-face {
+    font-family: transformers;
+    src: url(fonts/Transformers.ttf);
+}
+
+@font-face {
+    font-family: chromia-cond-bold;
+    src: url("fonts/chromia/Chromia Condensed Bold.otf")
+}
+
+@font-face {
+    font-family: autobot;
+    src: url(fonts/autobot.ttf)
+}
+@font-face {
+    font-family: decepticon;
+    src: url(fonts/decepticon.ttf);
+}
+
+/*  Navbar Styles */
+
+img.logo {
+    vertical-align: top;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 979px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+}

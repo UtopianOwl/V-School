@@ -15,7 +15,6 @@ $scope.faveList=[];
             }
         }
         fullList.forEach(callback);
-        console.log($scope.faveList);
     });
 
     $scope.add = function () {

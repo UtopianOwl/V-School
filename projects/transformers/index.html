@@ -6,7 +6,12 @@
     <title>Transformers</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
-    <!--    <link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="views/home/home.css">
+    <link rel="stylesheet" href="views/fave/fave.css">
+    <link rel="stylesheet" href="views/autobots/autobots.css">
+    <link rel="stylesheet" href="views/decepticons/decepticons.css">
+    <link rel="stylesheet" href="directives/transformer.css">
 </head>
 
 <body ng-app="AutobotApp">
@@ -20,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#/home"><img style="width: 64px" src="images/logo.png" alt="Autobot Logo"></a>
+                <a class="navbar-brand" href="#/home"><img class="logo" style="width: 64px" src="images/logo.png" alt="Autobot Logo"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,13 +34,13 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autobots <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="item in autobotList track by $index"><a href="#/autobots">{{ item.name }}</a></li>
+                            <li ng-repeat="item in autobotList track by $index"><a href="#/autobots" ng-click="autobot($index)">{{ item.name }}</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Decepticons <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="item in decepticonList track by $index"><a href="#/decepticons">{{ item.name }}</a></li>
+                            <li ng-repeat="item in decepticonList track by $index"><a href="#/decepticons" ng-click="decepticon($index)">{{ item.name }}</a></li>
                         </ul>
                     </li>
                     <li><a href="#/fave">Favorites</a></li>
@@ -46,15 +51,17 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    
+
     <div ng-view></div>
-    
+
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="model/modelService.js"></script>
+    <script type="text/javascript" src="views/home/home.js"></script>
+    <script type="text/javascript" src="views/fave/fave.js"></script>
 </body>
 
 </html>

@@ -6,23 +6,36 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "views/fave/fave.html",
             controller: "faveCtrl"
         })
-//        .when("/autobots", {
-//            templateUrl: "views/autobots/autobots.html",
-//            controller: "autoCtrl"
-//        })
-//        .when("/decepticons", {
-//            templateUrl: "views/decepticons/decepticons.html",
-//            controller: "decepCtrl"
-//        })
-//        .otherwise({
-//            templateUrl: "views/home/home.html",
-//            controller: "homeCtrl"
-//        })
+        .when("/autobots", {
+            templateUrl: "views/autobots/autobots.html",
+            controller: "mainCtrl"
+        })
+        .when("/decepticons", {
+            templateUrl: "views/decepticons/decepticons.html",
+            controller: "mainCtrl"
+        })
+        .otherwise({
+            templateUrl: "views/home/home.html",
+            controller: "homeCtrl"
+        })
 }]);
+
+app.directive('transformer', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            bot: '='
+            
+        },
+        templateUrl: 'directives/transformer.html'
+    }
+});
+
 app.controller('mainCtrl', ['$scope', 'modelService', function ($scope, modelService) {
 
     $scope.autobotList = [];
     $scope.decepticonList = [];
+    $scope.bot = {};
 
     modelService.get().then(function (botList) {
         var fullList = [];
@@ -41,5 +54,14 @@ app.controller('mainCtrl', ['$scope', 'modelService', function ($scope, modelSer
         fullList.forEach(autoCallback);
         fullList.forEach(decepCallback);
     });
-
+    
+    $scope.autobot = function(index) {
+        $scope.bot = $scope.autobotList[index];
+        console.log($scope.bot);
+    }
+    $scope.decepticon = function(index) {
+        $scope.bot = $scope.decepticonList[index];
+         console.log($scope.bot);
+    }
 }]);
+

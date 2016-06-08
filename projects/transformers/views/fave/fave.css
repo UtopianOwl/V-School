@@ -1,0 +1,37 @@
+/* Fave page Styles */
+
+h1.faveTitle {
+    font-family: "transformers", sans-serif;
+    text-align: center;
+}
+div.fave-body {
+    position: relative;
+    top: -16px;
+    right: 0;
+    left: 0;
+    padding-bottom: 128px;
+    background: #000 url(../../images/favorites-wallpaper.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+img.fave {
+    width: 100%;
+}
+div.box-main {
+    padding: 20px;
+    background-color: rgba(64, 64, 64, 0.5);
+    border-radius: 20px;
+    margin-bottom: 32px;
+    
+}
+h3.box {
+    text-align: center;
+    padding-bottom: 16px;
+    font-family: 'chromia-cond-bold', sans-serif;
+    text-transform: uppercase;
+}
+.newBot {
+    margin-bottom: 16px;
+}
+button.remove {
+    float: right;
+}
