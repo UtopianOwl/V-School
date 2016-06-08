@@ -6,13 +6,13 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "views/fave/fave.html",
             controller: "faveCtrl"
         })
-        .when("/autobots", {
+        .when("/autobots/:autobotName", {
             templateUrl: "views/autobots/autobots.html",
-            controller: "mainCtrl"
+            controller: "autobotCtrl"
         })
-        .when("/decepticons", {
+        .when("/decepticons/:decepticonName", {
             templateUrl: "views/decepticons/decepticons.html",
-            controller: "mainCtrl"
+            controller: "decepticonCtrl"
         })
         .otherwise({
             templateUrl: "views/home/home.html",
@@ -31,37 +31,10 @@ app.directive('transformer', function() {
     }
 });
 
-app.controller('mainCtrl', ['$scope', 'modelService', function ($scope, modelService) {
-
-    $scope.autobotList = [];
-    $scope.decepticonList = [];
-    $scope.bot = {};
-
-    modelService.get().then(function (botList) {
-        var fullList = [];
-        fullList = botList;
-
-        function autoCallback(element, index, array) {
-            if (element.username === 'root_Autobot') {
-                $scope.autobotList.push(element);
-            }
-        }
-        function decepCallback(element, index, array) {
-            if (element.username === 'root_Decepticon') {
-                $scope.decepticonList.push(element);
-            }
-        }
-        fullList.forEach(autoCallback);
-        fullList.forEach(decepCallback);
-    });
+app.controller('mainCtrl', ['$scope', 'modelManager', function ($scope, modelManager) {
+    modelManager.get();
+    $scope.autobotList = modelManager.autobotList;
+    $scope.decepticonList = modelManager.decepticonList;
     
-    $scope.autobot = function(index) {
-        $scope.bot = $scope.autobotList[index];
-        console.log($scope.bot);
-    }
-    $scope.decepticon = function(index) {
-        $scope.bot = $scope.decepticonList[index];
-         console.log($scope.bot);
-    }
 }]);
 

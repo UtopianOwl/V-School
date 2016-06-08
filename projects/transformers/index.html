@@ -32,15 +32,15 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autobots <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Autobots <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="item in autobotList track by $index"><a href="#/autobots" ng-click="autobot($index)">{{ item.name }}</a></li>
+                            <li ng-repeat="item in autobotList track by $index"><a href="#/autobots/{{ item.name }}">{{ item.name }}</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Decepticons <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Decepticons <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li ng-repeat="item in decepticonList track by $index"><a href="#/decepticons" ng-click="decepticon($index)">{{ item.name }}</a></li>
+                            <li ng-repeat="item in decepticonList track by $index"><a href="#/decepticons/{{ item.name }}">{{ item.name }}</a></li>
                         </ul>
                     </li>
                     <li><a href="#/fave">Favorites</a></li>
@@ -60,8 +60,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="model/modelService.js"></script>
+    <script type="text/javascript" src="model/modelManager.js"></script>
     <script type="text/javascript" src="views/home/home.js"></script>
     <script type="text/javascript" src="views/fave/fave.js"></script>
+    <script type="text/javascript" src="views/autobots/autobot.js"></script>
+    <script type="text/javascript" src="views/decepticons/decepticon.js"></script>
 </body>
 
 </html>

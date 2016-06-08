@@ -1,6 +1,6 @@
 <div class="nameBox">
     <h1 class="engName">{{ bot.name }}</h1>
-    <h2 class="botName">{{ bot.name }}</h2>
+    <h2 class="botName" ng-class="{'a' : bot.username === 'root_Autobot', 'd' : bot.username === 'root_Decepticon'}">{{ bot.name }}</h2>
 </div>
 <div class="imageBox">
     <img ng-src="{{ bot.imgUrl }}" alt="Bot Pic">

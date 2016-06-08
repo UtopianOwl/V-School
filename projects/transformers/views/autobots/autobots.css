@@ -12,6 +12,6 @@ div.autobot {
     z-index: -1;
 }
 
-h2.botName {
+h2.botName.a {
     font-family: 'autobot', sans-serif;
 }

@@ -12,6 +12,6 @@ div.decepticon {
     z-index: -1;
 }
 
-h2.botName {
+h2.botName.d {
     font-family: 'decepticon', sans-serif;
 }
