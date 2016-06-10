@@ -1,0 +1,21 @@
+{
+  "name": "rock-the-vote",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Drew Nauman <din3@cornell.edu>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/UtopianOwl/V-School",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap-show-errors": "^2.3.0"
+  }
+}

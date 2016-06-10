@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rock The Vote</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="Rock" ng-controller="mainCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <header role="banner">
+                    <h1 class="title text-center">Rock the Vote</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4" ng-hide="addPostToggle">
+                <button class="btn btn-primary center-block" ng-click="addPostToggle = true">New Post</button>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3" ng-show="addPostToggle">
+                <form class="form-group newPost" name="newPostForm" novalidate>
+                    <input type="text" class="form-control center-block" name="title" ng-model="newPost.title" placeholder="Title" autofocus required>
+                    <textarea rows="5" cols="64" class="form-control center-block" name="body" ng-model="newPost.body" placeholder="Your post body here..." required></textarea>
+                    <button class="btn btn-sucess center-block" ng-click="addPost()" ng-disabled="newPostForm.$invalid"><span class="glyphicon glyphicon-plus"></span></button>
+                </form>
+            </div>
+        </div>
+        <div class="well well-lg" ng-repeat="post in postList track by $index">
+            <div class="row">
+                <div class="col-xs-1">
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <div class="post" ng-hide="post.editToggle">
+                        <h2 class="postTitle">{{ post.title }}</h2>
+                        <p class="postBody">{{ post.body }}</p>
+                    </div>
+                    <form class="form-group editPost" name="editPostForm" ng-show="post.editToggle" novalidate>
+                        <input type="text" class="form-control center-block" name="title" ng-model="post.title" placeholder="Title" autofocus required>
+                        <textarea rows="5" cols="64" class="form-control center-block" name="body" ng-model="post.body" placeholder="Your post body here..." required></textarea>
+                    </form>
+                </div>
+                <div class="col-xs-1">
+                    <button class="btn btn-danger btn-xs pull-right" ng-click="deletePost($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button class="btn btn-warning btn-sm" ng-click="post.editToggle = true" ng-hide="post.editToggle"><span class="glyphicon glyphicon-pencil"></span></button>
+                    <button class="btn btn-success btn-sm" ng-click="editPost(post)" ng-show="post.editToggle"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                    <button class="btn btn-info btn-sm" ng-click="toggleComments($index)">[+]</button>
+                </div>
+            </div>
+            <div class="row" ng-hide="post.commentsToggle">
+                <div class="col-xs-12" ng-hide="post.addCommentToggle">
+                    <button class="btn btn-primary center-block" ng-click="post.addCommentToggle = true">New Comment</button>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3" ng-show="post.addCommentToggle">
+                    <form class="newComment" name="newCommentForm" novalidate>
+                        <div class="form-group input-group" show-errors>
+                            <input type="text" class="form-control center-block" name="magicWord" ng-model="newComment.magicWord" placeholder="Magic Word" autofocus show-errors required>
+                            <p class="help-block" ng-if="newComment.magicWord = 'dontfeedthetrolls'"><strong>Ah! ah! ah! </strong>You didn't say the magic word.</p>
+                            <textarea rows="5" cols="64" class="form-control center-block" name="body" ng-model="newComment.body" placeholder="Your comment here..." required></textarea>
+                            <button class="btn btn-sucess center-block" ng-click="addComment()" ng-disabled="newCommentForm.$invalid"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="comment" ng-repeat="comments in post.comments">
+                    <div class="col-xs-9 col-xs-offset-2">
+                        <p class="commentBody">{{ comment.body }}</p>
+                        <p class="commentId">{{ comment.id }}</p>
+                    </div>
+                    <div class="col-xs-1">
+                        <button class="btn btn-danger btn-sm center-block"><span class="glyphicon glyphicon-remove" ng-click="deleteComment($parent.$index, $index)"></span></button>
+                        <button class="btn btn-warning btn-sm center-block" ng-click="editComment($parent.$index, $index)"><span class="glyphicon glyphicon-pencil"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap-show-errors/src/showErrors.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="model/modelManager.js"></script>
+    <script type="text/javascript" src="model/modelService.js"></script>
+</body>
+
+</html>
