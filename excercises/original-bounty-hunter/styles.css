@@ -1,9 +1,9 @@
 @font-face {
     font-family: tie;
-    src: url(TIE-Wing.ttf);
+    src: url(fonts/TIE-Wing.ttf);
 }
 body {
-    background: #000 url(helmet.jpg) no-repeat center center fixed;
+    background: #000 url(images/helmet.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 

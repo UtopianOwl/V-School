@@ -63,8 +63,8 @@
             </div>
             <div class="col-xs-8">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4" ng-repeat="bounty in bountyList track by $index">
-                        <div class="panel panel-default" ng-hide="bounty.toggle">
+                    <div class="col-sm-6 col-md-4" ng-repeat="bounty in managerService.bountyList track by $index">
+                        <div class="panel panel-warning" ng-hide="bounty.toggle">
                             <div class="panel-heading">
                                 <h2 text-center>{{ bounty.firstName }}<br>{{ bounty.lastName }}</h2>
                             </div>
@@ -78,10 +78,10 @@
                             <div class="panel-footer">
                                 <div class="row">
                                     <div class="col-xs-2 col-xs-offset-4">
-                                        <button class="btn btn-warning center-block" ng-click="toggleEdit($index)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button class="btn btn-warning center-block" ng-click="toggleEdit(bounty)"><span class="glyphicon glyphicon-pencil"></span></button>
                                     </div>
                                     <div class="col-xs-2">
-                                        <button class="btn btn-danger center-block" ng-click="delete($index)"><span class="glyphicon glyphicon-remove"></span></button>
+                                        <button class="btn btn-danger center-block" ng-click="delete(bounty)"><span class="glyphicon glyphicon-remove"></span></button>
                                     </div>
                                 </div>
                             </div>
@@ -130,8 +130,8 @@
 
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="modelService.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/modelService.js"></script>
     <script type="text/javascript" src=""></script>
     <script type="text/javascript" src=""></script>
 </body>

@@ -1,8 +1,8 @@
 {
-  "name": "rock-the-vote",
+  "name": "mongoose-examples",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,9 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
-    "cors": "^2.7.1",
     "express": "^4.13.4",
-    "mongoose": "^4.5.0",
-    "uuid": "^2.0.2"
+    "mongoose": "^4.5.0"
   }
 }

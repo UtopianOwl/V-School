@@ -3,45 +3,18 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var uuid = require('uuid');
-
-var postList = [];
+var mongoose = require("mongoose");
+var port = process.env.PORT || 4000;
+var postRouter = require("./routes/postRouter");
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(postRouter);
 
-app.get('/rock', function (req, res) {
-    res.send(postList);
-});
 
-app.post('/rock', function (req, res) {
-    req.body.id = uuid.v4();
-    req.body.comments = [];
-    req.body.commentsToggle = true;
-    req.body.editToggle = false;
-    postList.push(req.body);
-    res.send(req.body);
-});
-app.put('/rock/:postId', function (req, res) {
-    for (var i = 0; i < postList.length; i++) {
-        if (postList[i].id === req.params.postId) {
-            postList[i] = req.body;
-            var postInfo = [postList[i], i]
-            return res.send(postInfo);
-        }
-    }
-    res.send("No post matching that ID was found")
-});
+mongoose.connect("mongodb://localhost/rock");
 
-app.delete('/rock/:postId', function (req, res) {
-    for (var i = 0; i < postList.length; i++) {
-        if (postList[i].id === req.params.postId) {
-            postList.splice(i, 1);
-            return res.send(postList);
-        }
-    }
-    res.send("No post matching that ID was found");
-});
 
-app.listen(8000, function () {
-    console.log("app is listening on port 8000");
+app.listen(port, function() {
+    console.log("app is listening on port " + port);
 })

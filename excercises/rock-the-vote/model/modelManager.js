@@ -4,9 +4,8 @@ app.service('modelManager', ['modelService', function(modelService) {
     var self = this;
     this.postList = [];
     this.getPosts = function()  {
-       return modelService.get().then(function (PostList) {
+       modelService.get().then(function (PostList) {
             self.postList = PostList;
-            return self.postList;
         });
         
     }
@@ -16,38 +15,68 @@ app.service('modelManager', ['modelService', function(modelService) {
         });
     }
     this.editPost = function(post) {
-        modelService.put(post).then(function (PostInfo) {
-            var index = PostInfo[1];
-            self.postList[index] = PostInfo[0];
+        modelService.put(post).then(function (Post) {
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
         });
     }
     this.deletePost = function(post) {
-        modelService.delete(post.id).then(function (PostList) {
+        modelService.delete(post._id).then(function (PostList) {
             self.postList = PostList;
         });
     }
-    this.addComment = function(comment, index) {
-        var post = self.postList[index]
+    this.addComment = function(post, comment) {
+        comment.editToggle = false;
         post.comments.push(comment);
         modelService.put(post).then(function (PostInfo) {
-            var i = PostInfo[1];
-            self.postList[i] = PostInfo[0];
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
         });
     }
-    this.editComment = function(comment, cIndex, pIndex) {
-        var post = self.postList[pIndex]
+    this.editComment = function(post, cIndex, comment) {
         post.comments[cIndex] = comment;
         modelService.put(post).then(function (PostInfo) {
-            var i = PostInfo[1];
-            self.postList[i] = PostInfo[0];
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
         });
     }
-    this.deleteComment = function(cIndex, pIndex) {
-        var post = self.postList[pIndex]
+    this.deleteComment = function(post, cIndex) {
         post.comments.splice(cIndex, 1);
         modelService.put(post).then(function (PostInfo) {
-            var i = PostInfo[1];
-            self.postList[i] = PostInfo[0];
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
+        });
+    }
+    this.addPoint = function(post) {
+        post.points++;
+        modelService.put(post).then(function (PostInfo) {
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
+        });
+    }
+    this.subtractPoint = function(post) {
+        post.points--;
+        modelService.put(post).then(function (PostInfo) {
+            for (var i = 0; i < self.postList.length; i++) {
+                if (self.postList[i]._id === Post._id) {
+                    self.postList[i] = Post;
+                }
+            }
         });
     }
 }]); 
