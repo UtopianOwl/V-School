@@ -37,278 +37,278 @@ var roll4 = function () {
 
 
 
-function placeShip(length, name) {
+//function placeShip(length, name) {
+//    var x = 0,
+//        y = 0,
+//        z = 0,
+//        lowerBound = length - 1,
+//        upperBound = 9 - length - 1;
+//    while ((z === 0 && x < lowerBound) || (z === 1 && y > upperBound) || (z === 2 && x > upperBound) || (z === 3 && y < lowerBound)) {
+//        x = roll10();
+//        y = roll10();
+//        z = roll4();
+//    }
+//var case0 = [x - i][y];
+//    function testVacant(length, x, y, z) {
+//        for (var i = 0; i < length; i++)
+//            switch (z) {
+//            case 0:
+//                if (myGrid[x - i][y].ship) {
+//                    return false;
+//                }
+//            case 1:
+//                if (myGrid[x][y + i].ship) {
+//                    return false;
+//                }
+//            case 2:
+//                if (myGrid[x + i][y].ship) {
+//                    return false;
+//                }
+//            case 3:
+//                if (myGrid[x][y - i].ship) {
+//                    return false;
+//                }
+//            }
+//        return true;
+//    }
+//    if (test()) {
+//        place()
+//    }
+//    else {
+//        
+//    }
+//
+//    function test(varCase) {
+//        for (var i = 0; i < length; i++) {
+//            if (myGrid[x - i][y].ship) {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//    function place() {
+//        for (var i = 0; i < length; i++) {
+//            myGrid[x - i][y].ship = true;
+//            myGrid[x - i][y].type = name;
+//        }
+//    }
+//}
+
+function placeAircraftCarrier() {
     var x = 0,
         y = 0,
-        z = 0,
-        lowerBound = length - 1,
-        upperBound = 9 - length - 1;
-    while ((z === 0 && x < lowerBound) || (z === 1 && y > upperBound) || (z === 2 && x > upperBound) || (z === 3 && y < lowerBound)) {
+        z = 0;
+    while ((z === 0 && x < 4) || (z === 1 && y > 5) || (z === 2 && x > 5) || (z === 3 && y < 4)) {
         x = roll10();
         y = roll10();
         z = roll4();
     }
-var case0 = [x - i][y];
-    function testVacant(length, x, y, z) {
-        for (var i = 0; i < length; i++)
-            switch (z) {
-            case 0:
-                if (myGrid[x - i][y].ship) {
-                    return false;
-                }
-            case 1:
-                if (myGrid[x][y + i].ship) {
-                    return false;
-                }
-            case 2:
-                if (myGrid[x + i][y].ship) {
-                    return false;
-                }
-            case 3:
-                if (myGrid[x][y - i].ship) {
-                    return false;
-                }
-            }
-        return true;
-    }
-    if (test()) {
-        place()
-    }
-    else {
-        
-    }
+    switch (z) {
+    case 0:
 
-    function test(varCase) {
-        for (var i = 0; i < length; i++) {
-            if (myGrid[x - i][y].ship) {
-                return false;
-            }
-        }
-        return true;
-    }
-    function place() {
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < 5; i++) {
             myGrid[x - i][y].ship = true;
-            myGrid[x - i][y].type = name;
+            myGrid[x - i][y].type = "Aircraft Carrier";
+        }
+        break;
+    case 1:
+        for (var i = 0; i < 5; i++) {
+            myGrid[x][y + i].ship = true;
+            myGrid[x][y + i].type = "Aircraft Carrier";
+        }
+        break;
+    case 2:
+        for (var i = 0; i < 5; i++) {
+            myGrid[x + i][y].ship = true;
+            myGrid[x + i][y].type = "Aircraft Carrier";
+        }
+        break;
+    case 3:
+        for (var i = 0; i < 5; i++) {
+            myGrid[x][y - i].ship = true;
+            myGrid[x][y - i].type = "Aircraft Carrier";
+        }
+        break;
+    }
+}
+
+function placeBattleship() {
+    var x = 0,
+        y = 0,
+        z = 0;
+    while ((z === 0 && x < 3) || (z === 1 && y > 6) || (z === 2 && x > 6) || (z === 3 && y < 3)) {
+        x = roll10();
+        y = roll10();
+        z = roll4();
+    }
+    switch (z) {
+    case 0:
+        if (myGrid[x][y].ship || myGrid[x - 1][y].ship || myGrid[x - 2][y].ship || myGrid[x - 3][y].ship) {
+            placeBattleship();
+        } else {
+            for (var i = 0; i < 4; i++) {
+                myGrid[x - i][y].ship = true;
+                myGrid[x - i][y].type = "Battleship";
+            }
+            break;
+        }
+    case 1:
+        if (myGrid[x][y].ship || myGrid[x][y + 1].ship || myGrid[x][y + 2].ship || myGrid[x][y + 3].ship) {
+            placeBattleship();
+        } else {
+            for (var i = 0; i < 4; i++) {
+                myGrid[x][y + i].ship = true;
+                myGrid[x][y + i].type = "Battleship";
+            }
+            break;
+        }
+    case 2:
+        if (myGrid[x][y].ship || myGrid[x + 1][y].ship || myGrid[x + 2][y].ship || myGrid[x + 3][y].ship) {
+            placeBattleship();
+        } else {
+            for (var i = 0; i < 4; i++) {
+                myGrid[x + i][y].ship = true;
+                myGrid[x + i][y].type = "Battleship";
+            }
+            break;
+        }
+    case 3:
+        if (myGrid[x][y].ship || myGrid[x][y - 1].ship || myGrid[x][y - 2].ship || myGrid[x][y - 3].ship) {
+            placeBattleship();
+        } else {
+            for (var i = 0; i < 4; i++) {
+                myGrid[x][y - i].ship = true;
+                myGrid[x][y - i].type = "Battleship";
+            }
+            break;
         }
     }
 }
 
-//function placeAircraftCarrier() {
-//    var x = 0,
-//        y = 0,
-//        z = 0;
-//    while ((z === 0 && x < 4) || (z === 1 && y > 5) || (z === 2 && x > 5) || (z === 3 && y < 4)) {
-//        x = roll10();
-//        y = roll10();
-//        z = roll4();
-//    }
-//    switch (z) {
-//    case 0:
-//
-//        for (var i = 0; i < 5; i++) {
-//            myGrid[x - i][y].ship = true;
-//            myGrid[x - i][y].type = "Aircraft Carrier";
-//        }
-//        break;
-//    case 1:
-//        for (var i = 0; i < 5; i++) {
-//            myGrid[x][y + i].ship = true;
-//            myGrid[x][y + i].type = "Aircraft Carrier";
-//        }
-//        break;
-//    case 2:
-//        for (var i = 0; i < 5; i++) {
-//            myGrid[x + i][y].ship = true;
-//            myGrid[x + i][y].type = "Aircraft Carrier";
-//        }
-//        break;
-//    case 3:
-//        for (var i = 0; i < 5; i++) {
-//            myGrid[x][y - i].ship = true;
-//            myGrid[x][y - i].type = "Aircraft Carrier";
-//        }
-//        break;
-//    }
-//}
-//
-//function placeBattleship() {
-//    var x = 0,
-//        y = 0,
-//        z = 0;
-//    while ((z === 0 && x < 3) || (z === 1 && y > 6) || (z === 2 && x > 6) || (z === 3 && y < 3)) {
-//        x = roll10();
-//        y = roll10();
-//        z = roll4();
-//    }
-//    switch (z) {
-//    case 0:
-//        if (myGrid[x][y].ship || myGrid[x - 1][y].ship || myGrid[x - 2][y].ship || myGrid[x - 3][y].ship) {
-//            placeBattleship();
-//        } else {
-//            for (var i = 0; i < 4; i++) {
-//                myGrid[x - i][y].ship = true;
-//                myGrid[x - i][y].type = "Battleship";
-//            }
-//            break;
-//        }
-//    case 1:
-//        if (myGrid[x][y].ship || myGrid[x][y + 1].ship || myGrid[x][y + 2].ship || myGrid[x][y + 3].ship) {
-//            placeBattleship();
-//        } else {
-//            for (var i = 0; i < 4; i++) {
-//                myGrid[x][y + i].ship = true;
-//                myGrid[x][y + i].type = "Battleship";
-//            }
-//            break;
-//        }
-//    case 2:
-//        if (myGrid[x][y].ship || myGrid[x + 1][y].ship || myGrid[x + 2][y].ship || myGrid[x + 3][y].ship) {
-//            placeBattleship();
-//        } else {
-//            for (var i = 0; i < 4; i++) {
-//                myGrid[x + i][y].ship = true;
-//                myGrid[x + i][y].type = "Battleship";
-//            }
-//            break;
-//        }
-//    case 3:
-//        if (myGrid[x][y].ship || myGrid[x][y - 1].ship || myGrid[x][y - 2].ship || myGrid[x][y - 3].ship) {
-//            placeBattleship();
-//        } else {
-//            for (var i = 0; i < 4; i++) {
-//                myGrid[x][y - i].ship = true;
-//                myGrid[x][y - i].type = "Battleship";
-//            }
-//            break;
-//        }
-//    }
-//}
-//
-//function placeCruiser() {
-//    var x = 0,
-//        y = 0,
-//        z = 0;
-//    while ((z === 0 && x < 2) || (z === 1 && y > 7) || (z === 2 && x > 7) || (z === 3 && y < 2)) {
-//        x = roll10();
-//        y = roll10();
-//        z = roll4();
-//    }
-//    switch (z) {
-//    case 0:
-//        if (myGrid[x][y].ship || myGrid[x - 1][y].ship || myGrid[x - 2][y].ship) {
-//            placeCruiser();
-//        } else {
-//            for (var i = 0; i < 3; i++) {
-//                myGrid[x - i][y].ship = true;
-//                myGrid[x - i][y].type = "Cruiser";
-//            }
-//            break;
-//        }
-//    case 1:
-//        if (myGrid[x][y].ship || myGrid[x][y + 1].ship || myGrid[x][y + 2].ship) {
-//            placeCruiser();
-//        } else {
-//            for (var i = 0; i < 3; i++) {
-//                myGrid[x][y + i].ship = true;
-//                myGrid[x][y + i].type = "Cruiser";
-//            }
-//            break;
-//        }
-//    case 2:
-//        if (myGrid[x][y].ship || myGrid[x + 1][y].ship || myGrid[x + 2][y].ship) {
-//            placeCruiser();
-//        } else {
-//            for (var i = 0; i < 3; i++) {
-//                myGrid[x + i][y].ship = true;
-//                myGrid[x + i][y].type = "Cruiser";
-//            }
-//            break;
-//        }
-//    case 3:
-//        if (myGrid[x][y].ship || myGrid[x][y - 1].ship || myGrid[x][y - 2].ship) {
-//            placeCruiser();
-//        } else {
-//            for (var i = 0; i < 3; i++) {
-//                myGrid[x][y - i].ship = true;
-//                myGrid[x][y - i].type = "Cruiser";
-//            }
-//            break;
-//        }
-//    }
-//}
-//
-//function placeDestroyer() {
-//    var x = 0,
-//        y = 0,
-//        z = 0;
-//    while ((z === 0 && x < 1) || (z === 1 && y > 8) || (z === 2 && x > 8) || (z === 3 && y < 1)) {
-//        x = roll10();
-//        y = roll10();
-//        z = roll4();
-//    }
-//    switch (z) {
-//    case 0:
-//        if (myGrid[x][y].ship || myGrid[x - 1][y].ship) {
-//            placeDestroyer();
-//        } else {
-//            for (var i = 0; i < 2; i++) {
-//                myGrid[x - i][y].ship = true;
-//                myGrid[x - i][y].type = "Destroyer";
-//            }
-//            break;
-//        }
-//    case 1:
-//        if (myGrid[x][y].ship || myGrid[x][y + 1].ship) {
-//            placeDestroyer();
-//        } else {
-//            for (var i = 0; i < 2; i++) {
-//                myGrid[x][y + i].ship = true;
-//                myGrid[x][y + i].type = "Destroyer";
-//            }
-//            break;
-//        }
-//    case 2:
-//        if (myGrid[x][y].ship || myGrid[x + 1][y].ship) {
-//            placeDestroyer();
-//        } else {
-//            for (var i = 0; i < 2; i++) {
-//                myGrid[x + i][y].ship = true;
-//                myGrid[x + i][y].type = "Destroyer";
-//            }
-//            break;
-//        }
-//    case 3:
-//        if (myGrid[x][y].ship || myGrid[x][y - 1].ship) {
-//            placeDestroyer();
-//        } else {
-//            for (var i = 0; i < 2; i++) {
-//                myGrid[x][y - i].ship = true;
-//                myGrid[x][y - i].type = "Destroyer";
-//            }
-//            break;
-//        }
-//    }
-//}
-//
-//function placeSubmarine() {
-//    do {
-//        var x = roll10();
-//        var y = roll10();
-//    } while (myGrid[x][y].ship === true)
-//    myGrid[x][y].ship = true;
-//    myGrid[x][y].type = "Submarine";
-//
-//
-//}
+function placeCruiser() {
+    var x = 0,
+        y = 0,
+        z = 0;
+    while ((z === 0 && x < 2) || (z === 1 && y > 7) || (z === 2 && x > 7) || (z === 3 && y < 2)) {
+        x = roll10();
+        y = roll10();
+        z = roll4();
+    }
+    switch (z) {
+    case 0:
+        if (myGrid[x][y].ship || myGrid[x - 1][y].ship || myGrid[x - 2][y].ship) {
+            placeCruiser();
+        } else {
+            for (var i = 0; i < 3; i++) {
+                myGrid[x - i][y].ship = true;
+                myGrid[x - i][y].type = "Cruiser";
+            }
+            break;
+        }
+    case 1:
+        if (myGrid[x][y].ship || myGrid[x][y + 1].ship || myGrid[x][y + 2].ship) {
+            placeCruiser();
+        } else {
+            for (var i = 0; i < 3; i++) {
+                myGrid[x][y + i].ship = true;
+                myGrid[x][y + i].type = "Cruiser";
+            }
+            break;
+        }
+    case 2:
+        if (myGrid[x][y].ship || myGrid[x + 1][y].ship || myGrid[x + 2][y].ship) {
+            placeCruiser();
+        } else {
+            for (var i = 0; i < 3; i++) {
+                myGrid[x + i][y].ship = true;
+                myGrid[x + i][y].type = "Cruiser";
+            }
+            break;
+        }
+    case 3:
+        if (myGrid[x][y].ship || myGrid[x][y - 1].ship || myGrid[x][y - 2].ship) {
+            placeCruiser();
+        } else {
+            for (var i = 0; i < 3; i++) {
+                myGrid[x][y - i].ship = true;
+                myGrid[x][y - i].type = "Cruiser";
+            }
+            break;
+        }
+    }
+}
+
+function placeDestroyer() {
+    var x = 0,
+        y = 0,
+        z = 0;
+    while ((z === 0 && x < 1) || (z === 1 && y > 8) || (z === 2 && x > 8) || (z === 3 && y < 1)) {
+        x = roll10();
+        y = roll10();
+        z = roll4();
+    }
+    switch (z) {
+    case 0:
+        if (myGrid[x][y].ship || myGrid[x - 1][y].ship) {
+            placeDestroyer();
+        } else {
+            for (var i = 0; i < 2; i++) {
+                myGrid[x - i][y].ship = true;
+                myGrid[x - i][y].type = "Destroyer";
+            }
+            break;
+        }
+    case 1:
+        if (myGrid[x][y].ship || myGrid[x][y + 1].ship) {
+            placeDestroyer();
+        } else {
+            for (var i = 0; i < 2; i++) {
+                myGrid[x][y + i].ship = true;
+                myGrid[x][y + i].type = "Destroyer";
+            }
+            break;
+        }
+    case 2:
+        if (myGrid[x][y].ship || myGrid[x + 1][y].ship) {
+            placeDestroyer();
+        } else {
+            for (var i = 0; i < 2; i++) {
+                myGrid[x + i][y].ship = true;
+                myGrid[x + i][y].type = "Destroyer";
+            }
+            break;
+        }
+    case 3:
+        if (myGrid[x][y].ship || myGrid[x][y - 1].ship) {
+            placeDestroyer();
+        } else {
+            for (var i = 0; i < 2; i++) {
+                myGrid[x][y - i].ship = true;
+                myGrid[x][y - i].type = "Destroyer";
+            }
+            break;
+        }
+    }
+}
+
+function placeSubmarine() {
+    do {
+        var x = roll10();
+        var y = roll10();
+    } while (myGrid[x][y].ship === true)
+    myGrid[x][y].ship = true;
+    myGrid[x][y].type = "Submarine";
+
+
+}
 
 createGrid();
 
-//placeAircraftCarrier();
-//placeBattleship();
-//placeCruiser();
-//placeDestroyer();
-//placeSubmarine();
+placeAircraftCarrier();
+placeBattleship();
+placeCruiser();
+placeDestroyer();
+placeSubmarine();
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
